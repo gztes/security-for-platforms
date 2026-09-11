@@ -1,0 +1,1778 @@
+{
+  "generated_by": "scripts/sync.py",
+  "sources": [
+    {
+      "key": "trailofbits",
+      "repo": "trailofbits/skills",
+      "sha": "321ccfe628eca0d314b0ee4eaffcdd8a05639aaf",
+      "license": "CC-BY-SA-4.0",
+      "homepage": "https://github.com/trailofbits/skills"
+    },
+    {
+      "key": "masriyan",
+      "repo": "Masriyan/Claude-Code-CyberSecurity-Skill",
+      "sha": "42e150160396a2e0e9e9ef7caf07bcefa2731212",
+      "license": "MIT",
+      "homepage": "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill"
+    },
+    {
+      "key": "trilwu",
+      "repo": "trilwu/secskills",
+      "sha": "ca53957bcd8e3b83b5d4d190bb3ad008a4f15c84",
+      "license": "MIT",
+      "homepage": "https://github.com/trilwu/secskills"
+    }
+  ],
+  "counts": {
+    "skills": 194,
+    "plugins": 48
+  },
+  "skills": [
+    {
+      "id": "masriyan/16-ai-llm-security",
+      "name": "AI & LLM Security",
+      "description": "LLM and AI application security testing \u2014 prompt injection, jailbreak resistance, OWASP LLM Top 10 (2025), RAG and agent/tool-use security, model supply chain, and AI red teaming for authorized assessments",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/16-ai-llm-security/SKILL.md",
+      "category": "ai-llm"
+    },
+    {
+      "id": "trailofbits/agentic-actions-auditor/agentic-actions-auditor",
+      "name": "agentic-actions-auditor",
+      "description": "Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations including Claude Code Action, Gemini CLI, OpenAI Codex, and GitHub AI Inference. Detects attack vectors where attacker-controlled input reaches AI agents running in CI/CD pipelines, including env var intermediary patterns, direct expression injection, dangerous sandbox configurations, and wildcard user allowlists. Use when reviewing workflow files that invoke AI coding agents, auditing CI/CD pipeline security for prompt injection risks, or evaluating agentic action configurations.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+      "category": "ai-llm"
+    },
+    {
+      "id": "trilwu/secskills-core/auditing-mcp-servers",
+      "name": "auditing-mcp-servers",
+      "description": "Audit Model Context Protocol servers for injection surfaces, excessive tool scope, authorization gaps, resource over-exposure, and transport weaknesses across stdio, SSE, and Streamable HTTP deployments. Use when reviewing an MCP server implementation, assessing tool definitions for injection or description manipulation risk, auditing the trust boundary between an AI agent and MCP tools, or reviewing MCP server deployment for authentication and authorization controls.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/auditing-mcp-servers/SKILL.md",
+      "category": "ai-llm"
+    },
+    {
+      "id": "trilwu/secskills-core/securing-ai-systems",
+      "name": "securing-ai-systems",
+      "description": "Assess and harden LLM applications and agentic systems against prompt injection, tool misuse, excessive agency, memory poisoning, RAG data leakage, and model supply-chain risk, mapped to the OWASP Top 10 for LLM and Agentic Applications. Use when reviewing an AI feature, agent, MCP server, or RAG pipeline for security, or when threat modeling an autonomous system.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/securing-ai-systems/SKILL.md",
+      "category": "ai-llm"
+    },
+    {
+      "id": "trilwu/secskills-core/vetting-agent-extensions",
+      "name": "vetting-agent-extensions",
+      "description": "Decide whether an agent skill, plugin, or MCP server is safe to install into an AI coding agent, where its content is loaded into a model's context and its config can run on startup. Use when reviewing a skill pack, Claude Code / Cursor / Cline plugin, or MCP server before adoption; when a repo ships a SKILL.md, .mcp.json, or plugin.json you are about to trust; or when judging whether third-party agent content can steer the model or exfiltrate an engagement.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/vetting-agent-extensions/SKILL.md",
+      "category": "ai-llm"
+    },
+    {
+      "id": "masriyan/10-cloud-security",
+      "name": "Cloud Security & Container Hardening",
+      "description": "AWS/Azure/GCP security auditing, container and Kubernetes hardening, Infrastructure as Code scanning, and cloud compliance assessment",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/10-cloud-security/SKILL.md",
+      "category": "cloud-container"
+    },
+    {
+      "id": "trailofbits/devcontainer-setup/devcontainer-setup",
+      "name": "devcontainer-setup",
+      "description": "Creates devcontainers with Claude Code, language-specific tooling (Python/Node/Rust/Go), and persistent volumes. Use when adding devcontainer support to a project, setting up isolated development environments, or configuring sandboxed Claude Code workspaces.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+      "category": "cloud-container"
+    },
+    {
+      "id": "trailofbits/audit-context-building/audit-context-building",
+      "name": "audit-context-building",
+      "description": "Understand a codebase before looking for bugs in it - what each function assumes, what it guarantees, and what it depends on elsewhere. Use when starting an audit, threat model, or architecture review on unfamiliar code, and before any vulnerability-hunting pass.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/c-review/c-review",
+      "name": "c-review",
+      "description": "Performs comprehensive C/C++ security review for memory corruption, integer overflows, race conditions, and platform-specific vulnerabilities. Use when auditing native C/C++ applications, reviewing daemons or services for memory safety, or hunting integer overflow / use-after-free / race conditions in userspace code.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/c-review/skills/c-review/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/differential-review/differential-review",
+      "name": "differential-review",
+      "description": "Performs security-focused differential review of code changes. Adapts analysis depth to codebase size, uses git blame for context, calculates blast radius by counting callers, checks test coverage of modified code, and generates a markdown report. Use when reviewing a PR, commit, or diff for security vulnerabilities, checking whether a change re-introduces a previously fixed bug, asking what else a change could break, or finding which modified code has no test covering it.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/differential-review/skills/differential-review/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/dimensional-analysis/dimensional-analysis",
+      "name": "dimensional-analysis",
+      "description": "Annotates codebases with dimensional analysis comments documenting units, dimensions, and decimal scaling. Use when someone asks to annotate units in a codebase, perform a dimensional analysis, or find vulnerabilities in a DeFi protocol, offchain code, or other blockchain-related codebase with arithmetic. Prevents dimensional mismatches and catches formula bugs early.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/fp-check/fp-check",
+      "name": "fp-check",
+      "description": "Systematically verifies suspected security bugs to eliminate false positives, producing a TRUE POSITIVE or FALSE POSITIVE verdict with documented evidence for each. Use when asked whether a specific finding is real, exploitable, or a false positive, or to verify or validate a suspected vulnerability \u2014 not for hunting or discovering new bugs.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/fp-check/skills/fp-check/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/modern-cpp/modern-cpp",
+      "name": "modern-cpp",
+      "description": "Guides C++ code toward modern idioms (C++20/23/26). Use when writing new C++ code, modernizing legacy patterns, or working on security-critical C++. Replaces raw pointers with smart pointers, SFINAE with concepts, printf with std::print, error codes with std::expected.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/modern-cpp/skills/modern-cpp/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/modern-python/modern-python",
+      "name": "modern-python",
+      "description": "Configures Python projects with modern tooling (uv, ruff, ty). Use when creating projects, writing standalone scripts, or migrating from pip/Poetry/mypy/black.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/modern-python/skills/modern-python/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/mutation-testing/mutation-testing",
+      "name": "mutation-testing",
+      "description": "Configures mewt or muton mutation testing campaigns \u2014 scopes targets, tunes timeouts, and optimizes long-running runs. Use when the user mentions mewt, muton, mutation testing, or wants to configure or optimize a mutation testing campaign.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/rust-review/rust-review",
+      "name": "rust-review",
+      "description": "Performs comprehensive Rust security review for safe/unsafe boundary issues, memory safety in unsafe blocks, concurrency hazards, panic-induced DoS, FFI safety, and async runtime mistakes. Use when auditing Rust crates, services, or libraries \u2014 particularly those with `unsafe`, FFI, or concurrent code.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/rust-review/skills/rust-review/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/semgrep-rule-variant-creator/semgrep-rule-variant-creator",
+      "name": "semgrep-rule-variant-creator",
+      "description": "Creates language variants of existing Semgrep rules. Use when porting a Semgrep rule to specified target languages. Takes an existing rule and target languages as input, produces independent rule+test directories for each language.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/semgrep-rule-variant-creator/skills/semgrep-rule-variant-creator/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/sharp-edges/sharp-edges",
+      "name": "sharp-edges",
+      "description": "Identifies error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes. Use when reviewing API designs, configuration schemas, cryptographic library ergonomics, or evaluating whether code follows 'secure by default' and 'pit of success' principles. Triggers: footgun, misuse-resistant, secure defaults, API usability, dangerous configuration.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/spec-to-code-compliance/spec-to-code-compliance",
+      "name": "spec-to-code-compliance",
+      "description": "Check code against the documentation that specifies it - which requirements hold, which the code contradicts, which are absent, and what the code does that no document mentions. Use when comparing an implementation against a whitepaper, protocol spec, or design document.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/spec-to-code-compliance/skills/spec-to-code-compliance/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/static-analysis/codeql",
+      "name": "codeql",
+      "description": ">- Scans a codebase for security vulnerabilities using CodeQL's interprocedural data flow and taint tracking analysis. Triggers on \"run codeql\", \"codeql scan\", \"build codeql database\", \"SAST scan\", \"taint analysis\", \"dataflow analysis\", or \"find vulnerabilities in this repo\". Covers Python, JavaScript/TypeScript, Go, Java/Kotlin, C/C++, C#, Ruby, and Swift. Supports \"run all\" (security-and-quality + security-experimental) and \"important only\" (high-precision) scan modes, and creates data extension models for project-specific sources and sinks. For fast single-file pattern matching, or when no build is available for a compiled language, use the semgrep skill; to parse SARIF that already exists rather than produce it, use the sarif-parsing skill.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/static-analysis/skills/codeql/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/static-analysis/semgrep",
+      "name": "semgrep",
+      "description": ">- Runs a Semgrep security scan over a codebase: detects languages, selects rulesets, presents the plan for explicit approval, then runs every approved ruleset through scripts/run-scans.sh, which batches the semgrep processes and writes scans.json, and merges the output to SARIF. Supports two scan modes, \"run all\" for full ruleset coverage and \"important only\" for security findings at medium-to-high confidence and impact. Uses Semgrep Pro for cross-file taint analysis when it is available. Use when asked to scan code for vulnerabilities, run a security audit with Semgrep, find bugs, or perform static analysis. For the same scan without the approval gate, use the /static-analysis:semgrep-scan workflow.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/static-analysis/skills/semgrep/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/variant-analysis/variant-analysis",
+      "name": "variant-analysis",
+      "description": "Hunts for the other instances of a bug already found \u2014 the variants of one root cause across a codebase. Use immediately after a vulnerability, logic bug, or bad pattern turns up in a specific file and the question becomes where else it occurs, including the bare conversational form (\"are there others like this?\", \"is this the same bug?\"). Also for generalizing one known instance into a CodeQL or Semgrep query for its whole pattern family, and for triaging a set of look-alike candidates against a known root cause. Not for initial discovery with no bug in hand.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trailofbits/vulnerability-triage-brocards/vulnerability-triage-brocards",
+      "name": "vulnerability-triage-brocards",
+      "description": ">- This skill should be used when the user asks to \"triage a vulnerability report\", \"assess a CVE\", \"evaluate a bug bounty submission\", \"decide if a finding is valid\", \"review a security finding\", \"dismiss a vulnerability\", \"should we fix this CVE\", \"prioritize a vulnerability report\", or needs to determine whether an incoming vulnerability report warrants investigation. Applies 7 brocards (rules of thumb) to systematically accept, dismiss, or request more information on vulnerability reports, or needs to filter raw findings from agentic vulnerability discovery pipelines before human review.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/vulnerability-triage-brocards/skills/vulnerability-triage-brocards/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trilwu/secskills-core/auditing-code-for-vulnerabilities",
+      "name": "auditing-code-for-vulnerabilities",
+      "description": "Audit source code for exploitable vulnerabilities using threat-model-driven review, taint tracing, invariant checking, and variant analysis. Use when reviewing a codebase or diff for security bugs, performing a security audit, hunting for vulnerabilities in a target's source, or validating whether a suspected finding is real.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/auditing-code-for-vulnerabilities/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trilwu/secskills-core/auditing-php-applications",
+      "name": "auditing-php-applications",
+      "description": "Audit PHP web application source for critical vulnerabilities using PHP's specific sink and footgun catalog \u2014 object injection via unserialize and phar:// POP chains, type-juggling and magic-hash auth bypass, LFI/RFI through php:// and phar:// wrappers, dynamic includes and extract()/superglobal trust, SQL injection in string-built and legacy mysql_* queries, command-execution sinks, and SSRF. Use when reviewing a PHP codebase, a WordPress/Magento/Laravel app, or a plugin for exploitable bugs. Defers general audit methodology to auditing-code-for-vulnerabilities.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/auditing-php-applications/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "trilwu/secskills-core/reviewing-code-changes",
+      "name": "reviewing-code-changes",
+      "description": "Perform a security review of a diff, branch, or pull request \u2014 assessing what the change introduces, weakens, or exposes, with a triage-first workflow and false-positive discipline. Use when asked to security review a PR or branch, check a diff before merge or commit, or assess whether a change is safe to ship.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reviewing-code-changes/SKILL.md",
+      "category": "code-review"
+    },
+    {
+      "id": "masriyan/13-crypto-analysis",
+      "name": "Cryptographic Analysis & Assessment",
+      "description": "SSL/TLS auditing, cipher suite analysis, hash algorithm identification, encryption implementation review, and cryptographic weakness detection in code",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/13-crypto-analysis/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/constant-time-analysis/constant-time-analysis",
+      "name": "constant-time-analysis",
+      "description": "Detects timing side-channel vulnerabilities in cryptographic code. Use when implementing or reviewing crypto code, encountering division on secrets, secret-dependent branches, or constant-time programming questions in C, C++, Go, Rust, Swift, Java, Kotlin, C#, PHP, JavaScript, TypeScript, Python, or Ruby.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/constant-time-testing",
+      "name": "constant-time-testing",
+      "description": "Measures timing side channels in cryptographic implementations by running them, using dudect for statistical analysis and Timecop over Valgrind for dynamic tracing. Covers the formal, symbolic, dynamic, and statistical tool categories and how to read a result. Use when testing whether a running implementation is constant-time, measuring timing variance on a compiled binary, or investigating a suspected timing attack. Not for statically inspecting compiler output \u2014 the constant-time-analysis plugin covers that.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/wycheproof",
+      "name": "wycheproof",
+      "description": "Validates cryptographic implementations against Project Wycheproof's test vectors, which encode known attacks and edge cases across AES, RSA, ECDSA, ECDH, and more. Covers loading test vectors, mapping result flags onto pass and fail expectations, and reading a failure. Use when testing a crypto implementation against known attacks, checking a library against standard test vectors, or investigating why two implementations disagree on the same input.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/wycheproof/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/trailmark/crypto-protocol-diagram",
+      "name": "crypto-protocol-diagram",
+      "description": "Extracts protocol message flow from source code, RFCs, academic papers, pseudocode, informal prose, ProVerif (.pv), or Tamarin (.spthy) models and generates Mermaid sequenceDiagrams with cryptographic annotations. Use when diagramming a crypto protocol, visualizing a handshake or key exchange flow, extracting message flow from a spec or RFC, diagramming a ProVerif or Tamarin model, or drawing sequence diagrams for TLS, Noise, Signal, X3DH, Double Ratchet, FROST, DH, or ECDH protocols.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/crypto-protocol-diagram/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/trailmark/mermaid-to-proverif",
+      "name": "mermaid-to-proverif",
+      "description": "Translates Mermaid sequenceDiagrams describing cryptographic protocols into ProVerif formal verification models (.pv files). Use when generating a ProVerif model, formally verifying a protocol, converting a Mermaid diagram to ProVerif, verifying protocol security properties (secrecy, authentication, forward secrecy), checking for replay attacks, or producing a .pv file from a sequence diagram.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/mermaid-to-proverif/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/trailmark/vector-forge",
+      "name": "vector-forge",
+      "description": "Mutation-driven test vector generation. Finds implementations of a cryptographic algorithm or protocol, runs mutation testing to identify escaped mutants, then generates new test vectors that deliberately exercise the uncovered code paths. Compares before/after mutation kill rates to prove vector effectiveness. Use when generating cryptographic test vectors, measuring Wycheproof coverage gaps, finding escaped mutants via mutation testing, creating cross-implementation test suites, or improving test vector coverage for crypto primitives.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/vector-forge/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/writing-lean-proofs/writing-lean-proofs",
+      "name": "writing-lean-proofs",
+      "description": "Writes and reviews structured Lean 4 proofs and designs Lean libraries following Mathlib conventions. Use when proving theorems in Lean, formalizing mathematics or specifications in Lean 4, defining new types or definitions in a Lean library, reviewing Lean proofs for readability and maintainability, refactoring long tactic proofs into lemmas, filling in sorry placeholders in a Lean development, setting up CI or linters for a Lean project, diagnosing slow proofs or maxHeartbeats timeouts, or writing custom tactics, macros, or linters.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/writing-lean-proofs/skills/writing-lean-proofs/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trilwu/secskills-core/reviewing-cryptography",
+      "name": "reviewing-cryptography",
+      "description": "Review cryptographic implementations and protocol usage for misuse \u2014 weak primitives, nonce and IV handling, key management, authentication of ciphertext, randomness, timing side channels, TLS and JWT configuration, and password storage. Use when auditing code that encrypts, signs, hashes, or authenticates, or when assessing TLS and token configurations.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reviewing-cryptography/SKILL.md",
+      "category": "crypto"
+    },
+    {
+      "id": "trailofbits/supply-chain-risk-auditor/supply-chain-risk-auditor",
+      "name": "supply-chain-risk-auditor",
+      "description": "Audits a project's dependencies for supply-chain risk: version-matched advisories for direct dependencies and the full lockfile tree, abandoned or archived upstreams, npm publisher concentration, and install-time script execution. Use when asked to audit dependencies, assess supply-chain or third-party package risk, or review a dependency tree before an engagement.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+      "category": "dependencies-supply-chain"
+    },
+    {
+      "id": "masriyan/02-vulnerability-scanner",
+      "name": "Vulnerability Scanning & Assessment",
+      "description": "Dependency auditing, CVE detection, configuration security review, CVSS scoring, and prioritized vulnerability reporting",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/02-vulnerability-scanner/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/06-threat-hunting",
+      "name": "Threat Hunting & IOC Analysis",
+      "description": "IOC extraction, threat intelligence correlation, MITRE ATT&CK mapping, hunt hypothesis generation, and detection rule creation",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/06-threat-hunting/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/08-network-security",
+      "name": "Network Security & Traffic Analysis",
+      "description": "Network traffic analysis, PCAP parsing, IDS/IPS rule creation, firewall configuration auditing, and network anomaly detection",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/08-network-security/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/09-web-security",
+      "name": "Web Application Security Testing",
+      "description": "OWASP Top 10 testing, injection vulnerability detection, API security assessment, authentication testing, and web vulnerability reporting for authorized assessments",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/09-web-security/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/15-blue-team-defense",
+      "name": "Blue Team Defense & Hardening",
+      "description": "System hardening, detection engineering, security baseline monitoring, patch management, defense-in-depth architecture, and security posture improvement",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/15-blue-team-defense/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/20-supply-chain-security",
+      "name": "Supply Chain Security",
+      "description": "Software supply chain security \u2014 SBOM generation and analysis, dependency confusion and typosquatting detection, malicious package indicators, CI/CD pipeline hardening, and artifact provenance/signing (SLSA, Sigstore)",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/20-supply-chain-security/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/21-threat-intelligence",
+      "name": "Threat Intelligence & CTI",
+      "description": "Cyber threat intelligence production \u2014 the intelligence cycle, IOC extraction/normalization/enrichment, STIX/TAXII and MISP, structured analytic models (Diamond, Kill Chain, ATT&CK), source scoring, actor/campaign tracking, and finished intelligence reporting",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/21-threat-intelligence/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/22-purple-team",
+      "name": "Purple Team & Adversary Emulation",
+      "description": "Collaborative purple-team operations \u2014 threat-informed adversary emulation planning (ATT&CK, CTID, Atomic Red Team, CALDERA), the detect-tune-validate loop, detection coverage measurement (DeTT&CT/Navigator), safe execution and deconfliction, and MTTD/coverage reporting",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/22-purple-team/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trailofbits/semgrep-rule-creator/semgrep-rule-creator",
+      "name": "semgrep-rule-creator",
+      "description": "Creates custom Semgrep rules for detecting security vulnerabilities, bug patterns, and code patterns. Use when writing Semgrep rules or building custom static analysis detections.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trailofbits/static-analysis/sarif-parsing",
+      "name": "sarif-parsing",
+      "description": ">- Parses and processes SARIF files from static analysis tools like CodeQL, Semgrep, or other scanners. Triggers on \"parse sarif\", \"read scan results\", \"aggregate findings\", \"deduplicate alerts\", or \"process sarif output\". Handles filtering, deduplication, format conversion, and CI/CD integration of SARIF data. Does NOT run scans \u2014 use the Semgrep or CodeQL skills for that.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/static-analysis/skills/sarif-parsing/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-core/mapping-attack-techniques",
+      "name": "mapping-attack-techniques",
+      "description": "Navigate security work by MITRE ATT&CK tactic and technique \u2014 resolve a technique ID or name to the right skill, map a threat intel report or adversary emulation plan to procedures, and run the purple-team loop from technique to detection to validation. Use when a request names an ATT&CK ID like T1003.001, a tactic like lateral movement, an APT group or intel report, or when planning coverage against the matrix.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/mapping-attack-techniques/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/defending-kubernetes",
+      "name": "defending-kubernetes",
+      "description": "Harden and monitor a Kubernetes cluster against the attacks that actually happen \u2014 RBAC least privilege and escalation paths, Pod Security Admission enforcement, network policy default-deny, secrets and service-account token exposure, control-plane and kubelet exposure, and audit-log-based detection. Use when reviewing a cluster's security posture, responding to a suspected cluster compromise, deciding what to enforce and detect, or translating an attack path from attacking-eks-gke-aks into a defense.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/defending-kubernetes/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/engineering-detections",
+      "name": "engineering-detections",
+      "description": "Build, test, and tune detection content \u2014 Sigma, YARA, Suricata, and EDR/SIEM queries \u2014 mapped to MITRE ATT&CK with explicit false-positive analysis and detection-as-code practices. Use when writing or reviewing a detection rule, converting IOCs or TTPs into alerts, measuring detection coverage, or reducing alert fatigue.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/engineering-detections/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/hardening-cloud-posture",
+      "name": "hardening-cloud-posture",
+      "description": "Proactively harden a cloud account or organization before an incident \u2014 prioritizing IAM and identity risk over checkbox findings, closing the exposures that become attack paths (public storage, over-broad roles, missing audit logging, unencrypted data), reading CSPM output critically, and enforcing guardrails at the org level. Use when reviewing a cloud environment's security posture, triaging a Prowler/ScoutSuite/Security Hub report, deciding which misconfigurations actually matter, or setting preventive controls across AWS, Azure, or GCP.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/hardening-cloud-posture/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/hunting-threats",
+      "name": "hunting-threats",
+      "description": "Run hypothesis-driven threat hunts across endpoint, network, cloud, and identity telemetry using stack counting, outlier analysis, and ATT&CK-based hypotheses, with SIEM query patterns for Splunk, KQL, and Elastic. Use when proactively searching for undetected compromise, validating an intel report against your environment, or converting a hunch into a repeatable hunt.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/hunting-threats/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/managing-vulnerabilities",
+      "name": "managing-vulnerabilities",
+      "description": "Prioritize and drive remediation of a vulnerability backlog by real risk, not raw CVSS \u2014 combining severity with exploitation signals (EPSS, CISA KEV), asset exposure and business context, using SSVC-style decisions, distinguishing reachable from merely present, and tracking remediation and exceptions. Use when triaging scanner output, deciding what to patch first, building a risk-based vulnerability management process, or explaining why a critical CVE is not the top priority.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/managing-vulnerabilities/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/producing-threat-intelligence",
+      "name": "producing-threat-intelligence",
+      "description": "Produce cyber threat intelligence by pivoting on indicators to find related infrastructure, tracking actors and campaigns, enriching and contextualizing IOCs, applying attribution discipline and analytic confidence, and packaging finished intel products tied to a consumer's decision. Covers the intelligence lifecycle, the Diamond Model and Pyramid of Pain, STIX/MISP/OpenCTI storage, TLP sharing, and passive enrichment via passive DNS, crt.sh, Shodan, Censys, GreyNoise, and VirusTotal. Use when pivoting from a domain, IP, hash, or certificate to related infrastructure, tracking a threat actor or campaign, enriching raw indicators, writing a finished intel report, assessing an external report's relevance to your org, or building a threat model of adversaries that matter to you.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/producing-threat-intelligence/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-defense/writing-sigma-rules",
+      "name": "writing-sigma-rules",
+      "description": "Author and maintain Sigma detection rules \u2014 structure, logsource taxonomy, detection logic with modifiers, false-positive filtering, backend conversion with pySigma, and offline validation with Hayabusa or Chainsaw. Use when translating threat intel into vendor-agnostic detection logic, building a detection-as-code pipeline around Sigma, reviewing or tuning existing Sigma rules, or converting rules across SIEM backends.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/writing-sigma-rules/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-mobile-applications",
+      "name": "testing-mobile-applications",
+      "description": "Pentest Android and iOS mobile applications including APK analysis, dynamic analysis, SSL pinning bypass, root/jailbreak detection bypass, and mobile-specific vulnerabilities. Use when testing mobile app security or performing mobile pentesting.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-mobile-applications/SKILL.md",
+      "category": "detection-intel"
+    },
+    {
+      "id": "masriyan/03-exploit-development",
+      "name": "Exploit Development & Payload Engineering",
+      "description": "Proof-of-concept development, payload crafting, shellcode analysis, and exploitation technique research for authorized security testing",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/03-exploit-development/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "masriyan/05-malware-analysis",
+      "name": "Malware Analysis & Sandboxing",
+      "description": "Static and dynamic malware analysis, YARA rule generation, sandbox configuration, behavioral profiling, and malware family classification",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/05-malware-analysis/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "masriyan/07-incident-response",
+      "name": "Incident Response & Digital Forensics",
+      "description": "IR playbook execution, evidence collection, forensic timeline analysis, memory forensics, and post-incident reporting following NIST SP 800-61 and SANS PICERL methodology",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/07-incident-response/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "masriyan/11-csoc-automation",
+      "name": "CSOC Operations & Playbook Automation",
+      "description": "SOC alert triage, incident playbook automation, escalation workflows, shift reporting, and SOC KPI tracking",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/11-csoc-automation/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "masriyan/12-log-analysis",
+      "name": "Log Analysis & SIEM Integration",
+      "description": "Security log parsing, anomaly detection, SIEM query building, Sigma rule creation, and correlation rule development across Splunk, Elastic, QRadar, and Microsoft Sentinel",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/12-log-analysis/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "masriyan/17-mobile-security",
+      "name": "Mobile Application Security",
+      "description": "Android and iOS application security testing \u2014 static and dynamic analysis, APK/IPA inspection, OWASP MASVS/MASTG verification, secure-storage and transport review, and mobile malware triage for authorized assessments",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/17-mobile-security/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trailofbits/yara-authoring/yara-rule-authoring",
+      "name": "yara-rule-authoring",
+      "description": "> Guides authoring of high-quality YARA-X detection rules for malware identification. Use when writing, reviewing, or optimizing YARA rules. Covers naming conventions, string selection, performance optimization, migration from legacy YARA, and false positive reduction. Triggers on: YARA, YARA-X, malware detection, threat hunting, IOC, signature, crx module, dex module.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/yara-authoring/skills/yara-rule-authoring/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-core/auditing-supply-chain",
+      "name": "auditing-supply-chain",
+      "description": "Audit software supply chain risk \u2014 dependency and transitive package review, typosquatting and dependency confusion, lockfile and SBOM analysis, CI/CD pipeline and GitHub Actions security, build provenance, and secrets exposure. Use when assessing third-party package risk, reviewing a build pipeline, investigating a malicious package, or hardening release infrastructure.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/auditing-supply-chain/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-core/hunting-web-backdoors",
+      "name": "hunting-web-backdoors",
+      "description": "Hunt planted webshells and backdoors across a web source tree \u2014 PHP first (also JSP, ASP, Node) \u2014 triaging a directory at scale, statically decoding obfuscation layers without ever executing the payload, finding append-infections and fake plugins, and treating known shell families as leads rather than verdicts. Use when a web server is suspected compromised, cleaning a hacked WordPress/Magento/CMS site, vetting a downloaded PHP codebase or plugin for hidden malicious code, or when a file contains eval on decoded input.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/hunting-web-backdoors/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-disk-images",
+      "name": "analyzing-disk-images",
+      "description": "Perform dead-disk forensics on an acquired disk image using The Sleuth Kit, Plaso, and bulk_extractor \u2014 verify integrity and mount read-only, map partitions, recover deleted files, build a file-system and super-timeline, carve unallocated space, mine registry hives and OS artifacts, and detect anti-forensics. Use when handed a .E01/.dd/.raw/.vmdk/.vhdx disk image or forensic acquisition to examine, recovering deleted files, building a file-system timeline, or carving artifacts from unallocated space.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-disk-images/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-linux-persistence",
+      "name": "analyzing-linux-persistence",
+      "description": "Systematically identify and analyze persistence mechanisms on Linux systems during DFIR investigations -- sweep systemd units, cron jobs, shell initialization, SSH config, kernel modules, LD_PRELOAD, package manager hooks, udev rules, container entrypoints, and XDG autostart entries. Use when investigating a compromised Linux host, performing forensic analysis of a Linux disk image, looking for backdoors or unauthorized access mechanisms, or determining how an attacker maintained access.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-linux-persistence/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-memory-images",
+      "name": "analyzing-memory-images",
+      "description": "Analyze volatile memory images (RAM dumps) using Volatility 3 \u2014 process enumeration, injected code detection, credential extraction, network artifacts, rootkit analysis, and timeline construction from memory-resident data. Use when examining a memory capture from a compromised host, hunting for injected code or hollowed processes, extracting credentials or network state from RAM, or detecting kernel-level rootkits.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-memory-images/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-network-traffic",
+      "name": "analyzing-network-traffic",
+      "description": "Analyze packet captures and network telemetry for intrusion evidence \u2014 capture and handling, the Wireshark/tshark triage funnel, Zeek log mining, Suricata rule runs, beacon and DNS-tunnel detection, TLS/JA3 fingerprinting, HTTP and file carving, exfiltration hunting, and IOC handoff. Use when a `.pcap` or `.pcapng` capture lands on your desk, when a suspected C2 beacon needs confirming, when there is data exfiltration to investigate, when malware network behaviour must be characterized from what it emitted, when a Zeek or Suricata alert needs running down, or when DNS tunneling or unusual TLS is suspected.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-network-traffic/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-phishing-emails",
+      "name": "analyzing-phishing-emails",
+      "description": "Triage and forensically analyze reported phishing safely \u2014 extract the raw message, read the Received chain, verify SPF/DKIM/DMARC, detect display-name and lookalike spoofing, unwrap redirects and SafeLinks/URLDefense, decode quishing QR codes, triage attachments, and pull IOCs for hunting. Use when handed a reported phishing email, a suspicious .eml or .msg file, a set of email headers to analyze, a malicious attachment or link to triage, or a business email compromise or spoofing case.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-phishing-emails/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-shellcode",
+      "name": "analyzing-shellcode",
+      "description": "Analyze raw shellcode and position-independent code \u2014 extracting the bytes, guessing architecture, disassembling at the right base, decoding self-decoder stubs, resolving hashed Windows APIs, emulating to the decoded stage, and pulling C2 and stage IOCs. Use when handed a raw blob of position-independent code, an extracted payload with no PE/ELF header, shellcode lifted from an exploit or a macro/loader, a `\\x`-escaped or base64 buffer, a suspected Cobalt Strike or Metasploit stager, or an egg-hunter.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-shellcode/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/investigating-aws-incidents",
+      "name": "investigating-aws-incidents",
+      "description": "Investigate security incidents in Amazon Web Services -- reconstruct attacker activity from CloudTrail, VPC Flow Logs, and GuardDuty, anchor the investigation on the compromised principal (access key or role), trace privilege escalation and persistence through IAM API calls, detect data exfiltration and crypto-mining, and contain without destroying evidence or tipping off the attacker. Use when responding to a suspected AWS compromise, exposed access keys, anomalous CloudTrail activity, a GuardDuty finding, unexpected IAM changes, crypto-mining EC2 instances, or S3 data exfiltration.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/investigating-aws-incidents/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/investigating-azure-incidents",
+      "name": "investigating-azure-incidents",
+      "description": "Investigate security incidents in Microsoft Azure (resource and subscription control plane) -- reconstruct attacker activity from the Azure Activity Log and resource/data-plane diagnostic logs, anchor the investigation on the identity that made the calls (a user, service principal, or managed identity), trace privilege escalation through role assignments, hunt managed-identity token abuse and VM run-command code execution, and detect storage or Key Vault data theft while correlating back to Entra sign-in logs. Use when responding to a suspected Azure resource compromise, anomalous Azure Activity Log entries, a Microsoft Defender for Cloud alert, managed-identity or service-principal abuse, a crypto-mining VM, or storage-account exfiltration.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/investigating-azure-incidents/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/investigating-gcp-incidents",
+      "name": "investigating-gcp-incidents",
+      "description": "Investigate a security incident in Google Cloud \u2014 establishing what audit logging exists before trusting a gap, reconstructing activity from Cloud Audit Logs, triaging service-account and OAuth abuse, following Security Command Center findings, and scoping IAM and resource changes. Use when responding to a suspected GCP compromise, investigating a leaked service-account key, working a Security Command Center or Event Threat Detection alert, or reconstructing what a principal did across a GCP organization.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/investigating-gcp-incidents/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/investigating-m365-entra",
+      "name": "investigating-m365-entra",
+      "description": "Investigate security incidents in Microsoft 365 and Entra ID (Azure AD) -- search the Unified Audit Log, correlate sign-in and audit events, trace illicit OAuth consent grants, analyze mailbox rule manipulation, and contain compromised identities. Use when responding to a BEC incident, investigating Entra ID compromise, analyzing suspicious OAuth app permissions, tracing mail forwarding abuse, or reviewing Azure AD sign-in anomalies.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/investigating-m365-entra/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/investigating-windows-endpoints",
+      "name": "investigating-windows-endpoints",
+      "description": "Investigate a compromised or suspicious Windows host from on-disk artifacts -- triage collection, evidence of execution (Prefetch, Amcache, Shimcache, SRUM, UserAssist, BAM), the event-log workhorses by ID (Security 4624/4688/4720/7045/1102, Sysmon, PowerShell 4104, RDP, WMI), persistence hunting across every autostart, lateral-movement traces, $MFT/USN filesystem forensics, anti-forensics detection, and building a super-timeline with the Eric Zimmerman suite, Chainsaw, Hayabusa, and Plaso. Use when triaging a compromised or suspicious Windows host, working through EVTX/Sysmon logs, reconstructing what executed on a Windows machine, hunting persistence and lateral-movement traces, or analyzing a KAPE/triage collection.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/investigating-windows-endpoints/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/responding-to-incidents",
+      "name": "responding-to-incidents",
+      "description": "Run digital forensics and incident response \u2014 triage, evidence acquisition with chain of custody, host and cloud artifact analysis, timeline reconstruction, scoping, containment, eradication, and postmortem. Use during a suspected compromise, when analyzing a disk or memory image, reconstructing an attacker timeline, or answering how far an intrusion spread.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/responding-to-incidents/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/triaging-security-alerts",
+      "name": "triaging-security-alerts",
+      "description": "Work a security alert queue to a defensible disposition \u2014 separating true positives from false positives and benign true positives, reasoning about base rates before escalating, ordering enrichment by cheapest discriminator, time-boxing, and documenting negative results so a closed alert is evidence rather than a guess. Use when triaging SOC or EDR alerts, deciding whether an alert warrants incident response, working through an alert backlog, or determining why a detection keeps firing.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/triaging-security-alerts/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trilwu/secskills-defense/writing-yara-rules",
+      "name": "writing-yara-rules",
+      "description": "Author durable YARA detection rules \u2014 meta/strings/condition anatomy, string types and modifiers, structural conditions with file magic and offsets, the PE/ELF/math/hash modules, specificity-vs-durability tuning, atom-aware performance, memory and process scanning, and YARA-X. Use when writing a YARA rule, creating a signature for a malware family or a file/memory artifact, turning IOCs or a captured sample into a detection, or hunting for a family across a corpus with Retrohunt or an on-host scanner.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/writing-yara-rules/SKILL.md",
+      "category": "dfir"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/address-sanitizer",
+      "name": "address-sanitizer",
+      "description": "Builds and runs code under AddressSanitizer to catch buffer overflows, use-after-free, and other memory errors during fuzzing or tests. Covers -fsanitize=address builds, ASAN_OPTIONS, reading the crash report, LeakSanitizer, and the overhead and platform trade-offs. Use when fuzzing C/C++ or Rust that has unsafe blocks or FFI, when debugging a memory corruption crash, or when reading an ASan stack trace.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/aflpp",
+      "name": "aflpp",
+      "description": "Sets up and runs AFL++ for multi-core fuzzing of C/C++ projects built with afl-clang-fast or afl-gcc-fast. Covers instrumentation modes, parallel main and secondary campaigns, persistent mode, corpus minimization, and crash triage. Use when scaling fuzzing across cores, fuzzing a mature C/C++ codebase, reading the afl-fuzz status screen, or moving on after libFuzzer has plateaued.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/atheris",
+      "name": "atheris",
+      "description": "Sets up and runs Atheris, the coverage-guided Python fuzzer built on libFuzzer. Covers TestOneInput harnesses, FuzzedDataProvider, instrumenting both pure Python and native C extensions, and running under AddressSanitizer. Use when fuzzing a Python package, hunting memory corruption in a Python C extension, or choosing between Atheris and Hypothesis for a Python target.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/cargo-fuzz",
+      "name": "cargo-fuzz",
+      "description": "Sets up and runs cargo-fuzz, the standard fuzzing tool for Cargo-based Rust projects. Covers cargo fuzz init, the nightly toolchain requirement, fuzz_target! harnesses, Arbitrary-derived structured inputs, sanitizer options, cargo fuzz coverage, and reproducing a crash artifact. Use when fuzzing a Rust crate, writing a fuzz_target!, exercising unsafe blocks or FFI in Rust, or triaging a cargo fuzz crash.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/coverage-analysis",
+      "name": "coverage-analysis",
+      "description": "Measures and interprets what a fuzzing campaign actually reaches, using llvm-cov, lcov, or a fuzzer's own coverage output. Covers baselining a new campaign, reading coverage reports, and turning uncovered regions into harness, seed, or dictionary work. Use when a fuzzer plateaus, when judging whether a harness is effective, after changing a harness, or when asking why some code is never reached.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/fuzzing-dictionary",
+      "name": "fuzzing-dictionary",
+      "description": "Builds and applies fuzzing dictionaries so a fuzzer can produce the keywords, magic bytes, and tokens a target expects. Covers extracting tokens from source, headers, binaries, and specifications, dictionary syntax, and wiring one into libFuzzer or AFL++. Use when fuzzing a parser, protocol, or file format, when coverage stalls at input validation, or when a target compares against fixed strings.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/fuzzing-dictionary/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/fuzzing-obstacles",
+      "name": "fuzzing-obstacles",
+      "description": "Patches past the barriers that stop a fuzzer making progress \u2014 checksum and hash verification, magic-value validation, time-based seeds, and other non-deterministic global state. Covers locating the blocking check, neutering it behind a fuzzing build flag, and avoiding the false positives a patch can introduce. Use when a fuzzer is stuck at validation, when coverage shows large regions behind a checksum, or when valid inputs are impractical to generate.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/fuzzing-obstacles/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/harness-writing",
+      "name": "harness-writing",
+      "description": "Designs and improves fuzzing harnesses for C/C++ and Rust. Covers mapping raw bytes onto a target API, generating structured inputs, avoiding non-determinism and false crashes, and deciding what to fuzz together. Use when writing a first LLVMFuzzerTestOneInput or fuzz_target! harness, when a campaign finds nothing or reports crashes that will not reproduce, or when the target API needs structured rather than raw input.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/libafl",
+      "name": "libafl",
+      "description": "Builds custom fuzzers with LibAFL, the modular Rust fuzzing library. Covers composing observers, feedbacks, mutators, schedulers, and executors into a fuzzer for targets the standard tools do not fit. Use when writing a bespoke fuzzer or mutator, fuzzing a non-standard target or architecture, implementing a fuzzing research idea, or when libFuzzer and AFL++ lack the control you need.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/libafl/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/libfuzzer",
+      "name": "libfuzzer",
+      "description": "Sets up and runs libFuzzer, the coverage-guided fuzzer built into LLVM, on C/C++ code that compiles with Clang. Covers harness structure, -fsanitize=fuzzer builds, corpus and dictionary management, sanitizer integration, and campaign triage. Use when writing or debugging an LLVMFuzzerTestOneInput harness, starting fuzzing on a C/C++ library, choosing between libFuzzer and AFL++, or working out why a libFuzzer run finds nothing.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/ossfuzz",
+      "name": "ossfuzz",
+      "description": "Enrolls a project in OSS-Fuzz, Google's free continuous fuzzing service for open source, and drives it locally. Covers project.yaml, Dockerfile and build.sh setup, the helper scripts, reproducing OSS-Fuzz crash reports, and the acceptance criteria. Use when setting up continuous fuzzing for an open-source project, reproducing an OSS-Fuzz bug report, or testing an OSS-Fuzz build before submitting it.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/ossfuzz/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/ruzzy",
+      "name": "ruzzy",
+      "description": "Sets up and runs Ruzzy, Trail of Bits' coverage-guided Ruby fuzzer and the only production-ready one for the language. Covers harness structure, fuzzing pure Ruby and the native C extensions in gems, and sanitizer builds. Use when fuzzing a Ruby library or gem, testing a Ruby C extension for memory safety, or asking how to fuzz Ruby at all.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-network-protocols",
+      "name": "reversing-network-protocols",
+      "description": "Reverse engineer undocumented binary network protocols from packet captures and the client that speaks them \u2014 recovering framing and field structure, identifying length prefixes, opcodes, checksums and encryption, and building a Wireshark/Kaitai/scapy parser to replay or fuzz. Use when analyzing a proprietary TCP/UDP protocol, a game or IoT or C2 protocol with no spec, or traffic that Wireshark shows only as raw bytes.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-network-protocols/SKILL.md",
+      "category": "fuzzing"
+    },
+    {
+      "id": "masriyan/19-grc-compliance",
+      "name": "GRC & Compliance",
+      "description": "Governance, risk, and compliance \u2014 risk assessment and scoring, control mapping across NIST CSF 2.0 / ISO 27001:2022 / SOC 2 / CIS Controls v8, gap analysis, audit evidence preparation, and security policy generation",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/19-grc-compliance/SKILL.md",
+      "category": "grc"
+    },
+    {
+      "id": "trilwu/secskills-core/reporting-security-findings",
+      "name": "reporting-security-findings",
+      "description": "Write security findings and assessment reports \u2014 severity scoring with CVSS and business impact, reproducible proof of concept, remediation guidance, executive summaries, and coordinated disclosure. Use when writing up a vulnerability, producing a pentest or audit report, triaging a bug bounty submission, or preparing a disclosure timeline.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reporting-security-findings/SKILL.md",
+      "category": "grc"
+    },
+    {
+      "id": "trailofbits/claude-in-chrome-troubleshooting/chrome-mcp-troubleshooting",
+      "name": "chrome-mcp-troubleshooting",
+      "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues. Use when mcp__claude-in-chrome__* tools fail, return \"Browser extension is not connected\", or behave erratically.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/claude-in-chrome-troubleshooting/skills/chrome-mcp-troubleshooting/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/code-improver/code-improver",
+      "name": "code-improver",
+      "description": "Runs an autonomous review-and-fix improvement loop over any code target \u2014 a skill, plugin, module, or directory \u2014 using a reviewer the user names: any installed skill or agent. Keeps a cross-round findings ledger, escalates when fixes stop converging, and guards scope mechanically. Use when asked to 'improve this code until review passes', 'run an improvement loop with <reviewer>', or to iterate review-and-fix with a specific reviewer. For skills prefer the skill-improver entry; for a branch prefer pr-improver.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/code-improver/skills/code-improver/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/code-improver/pr-improver",
+      "name": "pr-improver",
+      "description": "Runs an autonomous review-and-fix improvement loop over the current branch's changes until a PR review comes back clean, scoped mechanically to the directories the branch touched. Reviews are performed by an installed PR-review skill (default: pr-review-toolkit's review-pr). Use to fix review findings on a branch before opening or updating a pull request ('clean up this branch', 'fix this PR until review passes', 'run review-and-fix on my changes'). NOT for a one-time review \u2014 run the PR-review skill directly.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/code-improver/skills/pr-improver/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/code-improver/skill-improver",
+      "name": "skill-improver",
+      "description": "Runs an autonomous review-and-fix improvement loop over a Claude Code skill until a review comes back clean, with a cross-round findings ledger, escalation when fixes stop converging, and a mechanical scope guard. Reviews are performed by the plugin-dev skill-reviewer agent. Use to fix skill quality issues, iteratively refine a skill, or resume a loop after an escalation ('fix my skill', 'improve this skill until it passes review', 'skill improvement loop'). NOT for a one-time review \u2014 use the plugin-dev skill-reviewer agent directly.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/code-improver/skills/skill-improver/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/gh-cli/gh-cli",
+      "name": "gh-cli",
+      "description": "Enforces authenticated gh CLI workflows over unauthenticated curl, WebFetch, and MCP fetch patterns. Use when working with GitHub URLs, API access, pull requests, or issues.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/gh-cli/skills/gh-cli/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/github-triage/github-triage",
+      "name": "github-triage",
+      "description": "Triages a repository's open GitHub issues and pull requests via the gh CLI. Optionally reviews and merges ready PRs \u2014 incrementally merging passing automated/bot PRs and maintainer-approved ones, and spawning review subagents for never-reviewed ones \u2014 then closes already-resolved issues with comments citing the resolving PR or commit, cross-links issues with their pending fix PRs, and assigns local-only priority and change-size estimates for everything outstanding. Use when triaging, grooming, or reviewing a repository's open issues and PRs.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/github-triage/skills/github-triage/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/open-sourcing/open-sourcing",
+      "name": "open-sourcing",
+      "description": "This skill should be used when the user asks to \"open source this project\", \"prepare this repository for public release\", \"make this repo public\", \"check open-source readiness\", \"choose a license for this project\", or \"set up release automation\" ahead of a public launch. Provides a release-readiness workflow covering secrets hygiene, licensing, documentation, CI, and language-specific packaging.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/open-sourcing/skills/open-sourcing/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/second-opinion/second-opinion",
+      "name": "second-opinion",
+      "description": "Runs external LLM code reviews (OpenAI Codex or Google Antigravity CLI) on uncommitted changes, branch diffs, or specific commits. Use when the user asks for a second opinion, external review, codex review, gemini review, antigravity review, or mentions /second-opinion.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/second-opinion/skills/second-opinion/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/testing-handbook-skills/testing-handbook-generator",
+      "name": "testing-handbook-generator",
+      "description": "Generates Claude Code skills from the Trail of Bits Testing Handbook (appsec.guide), analyzing handbook pages and emitting SKILL.md files with the structure each skill type requires. Use when creating or refreshing a skill from handbook content, or when the user names the testing handbook or appsec.guide. Not for answering security testing questions \u2014 the generated skills cover those.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/testing-handbook-skills/skills/testing-handbook-generator/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trilwu/.claude/authoring-security-skills",
+      "name": "authoring-security-skills",
+      "description": "Write a new SecSkills skill end to end \u2014 choosing the plugin bucket and skill tier, writing a description that triggers correctly without stealing traffic from siblings, the required sections, registering the skill in ttp-index.json, adding routing eval cases including negative traps, and running the three validators. Use when adding a skill to this repo, splitting or merging existing skills, fixing a skill that triggers on the wrong requests, or when a new skill fails validate.py, sync_attack.py, or run_evals.py.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/.claude/skills/authoring-security-skills/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trilwu/.claude/verifying-skill-accuracy",
+      "name": "verifying-skill-accuracy",
+      "description": "Fact-check LLM-drafted technical content against primary sources \u2014 source hierarchy, programmatic existence probes for tool and plugin names, class-before-instance error triage, the truncated-negative trap, adversarial re-checking, and the verified-stamp discipline. Use when auditing a SKILL.md for factual errors, before stamping a skill verified, when a command or artifact claim needs confirming against upstream documentation, or when reviewing any drafted content whose specifics were written from model memory.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/.claude/skills/verifying-skill-accuracy/SKILL.md",
+      "category": "meta-tooling"
+    },
+    {
+      "id": "trailofbits/firebase-apk-scanner/firebase-apk-scanner",
+      "name": "firebase-apk-scanner",
+      "description": "Scans Android APKs for Firebase security misconfigurations including open databases, storage buckets, authentication issues, and exposed cloud functions. Use when analyzing APK files for Firebase vulnerabilities, performing mobile app security audits, or testing Firebase endpoint security. For authorized security research only.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/firebase-apk-scanner/skills/firebase-apk-scanner/SKILL.md",
+      "category": "mobile"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-mobile-ipc",
+      "name": "testing-mobile-ipc",
+      "description": "Test mobile inter-process communication and deep link attack surface \u2014 exported Android activities, services, receivers and content providers, intent redirection, PendingIntent hijacking, App Links verification, iOS custom URL schemes, Universal Links, and App Groups \u2014 using drozer, adb, and Frida. Use when reviewing AndroidManifest.xml exported components, testing deeplinks or URL schemes, or assessing what another app on the device can reach.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-mobile-ipc/SKILL.md",
+      "category": "mobile"
+    },
+    {
+      "id": "masriyan/01-recon-osint",
+      "name": "Reconnaissance & OSINT Automation",
+      "description": "Passive and active reconnaissance, subdomain enumeration, DNS analysis, technology fingerprinting, and OSINT data correlation for authorized security assessments",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/01-recon-osint/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "masriyan/14-red-team-ops",
+      "name": "Red Team Operations & Engagement Planning",
+      "description": "Authorized red team engagement planning, C2 architecture design, attack methodology, lateral movement strategy, OPSEC, and professional reporting",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/14-red-team-ops/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "masriyan/18-ot-ics-security",
+      "name": "OT / ICS / SCADA Security",
+      "description": "Operational Technology and industrial control system security \u2014 Purdue model segmentation, industrial protocol analysis (Modbus, DNP3, S7, EtherNet/IP), PLC/HMI exposure, IEC 62443 alignment, and MITRE ATT&CK for ICS, for authorized and safety-conscious assessments",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/18-ot-ics-security/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-core/maintaining-engagement-state",
+      "name": "maintaining-engagement-state",
+      "description": "Keep the durable record that outlives a session \u2014 credential provenance, access inventory, artifacts left on target for cleanup, findings with evidence, and a dead-end log \u2014 so work spanning days or analysts does not restart or contradict itself. Use when an engagement or investigation runs longer than one sitting, when resuming work after a gap, when handing off to another analyst, before a context window rolls over, or when you cannot say where a credential or access came from.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/maintaining-engagement-state/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-core/orchestrating-vulnerability-research",
+      "name": "orchestrating-vulnerability-research",
+      "description": "Run a sustained, multi-agent vulnerability-discovery campaign against a target \u2014 split its attack surface into slices, hunt each slice with a builder agent, and have a separate critic with fresh context adversarially refute every candidate against the real artifact (a reproduced crash, a working request, a proven bypass) before it counts as a finding. Use when tasked to find previously-unknown bugs across a whole codebase, a binary, or a named live target; when you want to fan out many agents and loop until findings are proven rather than plausible; or when a single audit pass has stalled and you need builder/critic separation so the hunter never grades its own work. Dispatches auditing-code-for-vulnerabilities, analyzing-binaries, and testing-web-applications as the per-slice hunters and hands proven findings to reporting-security-findings.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/orchestrating-vulnerability-research/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/abusing-adcs",
+      "name": "abusing-adcs",
+      "description": "Enumerate and abuse Active Directory Certificate Services with Certipy and Certify \u2014 the ESC1 through ESC16 escalation paths, vulnerable template and CA configurations, NTLM relay to web enrollment, certificate-based authentication and persistence, and the strong-mapping changes that gate several of them. Use when a domain has a certificate authority, when Certipy or BloodHound reports vulnerable templates, or when escalating from a low-privilege domain user.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/abusing-adcs/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/abusing-ci-cd-oidc",
+      "name": "abusing-ci-cd-oidc",
+      "description": "Exploit CI/CD pipeline misconfigurations and OIDC federation weaknesses across GitHub Actions, GitLab CI, and Jenkins -- poisoned workflows, secret exfiltration, runner compromise, overly broad OIDC trust policies, build artifact poisoning, and credential theft. Use when pentesting CI/CD infrastructure, assessing OIDC federation trust boundaries, reviewing pipeline security posture, or exploiting a path from repository access to cloud credentials.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/abusing-ci-cd-oidc/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-active-directory",
+      "name": "attacking-active-directory",
+      "description": "Attack and enumerate Active Directory environments using Kerberos attacks (Kerberoasting, ASREPRoasting), credential dumping (DCSync, Mimikatz), lateral movement (PtH, PtT), and BloodHound analysis. Use when pentesting Windows domains or exploiting AD misconfigurations.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-active-directory/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-bluetooth-nfc",
+      "name": "attacking-bluetooth-nfc",
+      "description": "Attack Bluetooth Classic, BLE, and NFC targets -- device enumeration, GATT characteristic exploitation, BLE MITM and replay, Ubertooth and nRF sniffing, MIFARE Classic cracking, Proxmark3 card cloning, NFC relay attacks, and access control bypass. Use when pentesting BLE peripherals or IoT devices, assessing NFC-based access controls or contactless payment security, testing Bluetooth pairing and authentication, or evaluating physical access card cloneability.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-bluetooth-nfc/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-eks-gke-aks",
+      "name": "attacking-eks-gke-aks",
+      "description": "Assess managed Kubernetes clusters on EKS, GKE, and AKS by exploiting the seams between cloud IAM and Kubernetes RBAC -- IRSA/OIDC trust abuse, Workload Identity Federation, pod-to-IMDS escalation, aws-auth ConfigMap takeover, node pool service account abuse, and AAD integration weaknesses. Use when pentesting a managed k8s cluster, reviewing RBAC in EKS/GKE/AKS, testing pod-to-cloud escalation, or assessing network policy enforcement across namespaces.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-eks-gke-aks/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-entra-id",
+      "name": "attacking-entra-id",
+      "description": "Attack and enumerate Azure AD / Entra ID tenants \u2014 initial recon with AADInternals and ROADtools, password spraying, token theft (PRT, CAE, refresh tokens), application and service principal abuse, Conditional Access bypass, cross-tenant pivoting, hybrid identity attacks (PTA agent, Azure AD Connect), and managed identity abuse. Use when pentesting Entra ID tenants, assessing Azure AD security posture, or exploiting cloud identity misconfigurations.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-entra-id/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-graphql",
+      "name": "attacking-graphql",
+      "description": "Test GraphQL APIs \u2014 introspection and schema recovery when introspection is disabled, field suggestion abuse, batching and alias-based rate limit bypass, query depth and complexity denial of service, authorization gaps per field and per resolver, and mutation abuse. Use when a target exposes /graphql, /v1/graphql, or /api/graphql, when requests contain a query or mutation body, or when responses carry a data and errors envelope.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-graphql/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-grpc-protobuf",
+      "name": "attacking-grpc-protobuf",
+      "description": "Test gRPC and Protocol Buffers services \u2014 recovering .proto definitions from server reflection or compiled descriptors, calling methods with grpcurl and grpcui, intercepting HTTP/2 and gRPC-Web traffic, and fuzzing unknown message schemas with protobuf-inspector. Use when a target speaks gRPC, HTTP/2 with application/grpc, or when a request body is opaque binary protobuf rather than JSON.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-grpc-protobuf/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-hardware-interfaces",
+      "name": "attacking-hardware-interfaces",
+      "description": "Assess the physical attack surface of embedded devices \u2014 finding and using UART consoles, JTAG/SWD debug, and SPI/I2C flash; dumping firmware off-chip; triaging secure boot; and studying sub-GHz RF replay feasibility with an SDR. Use when you have physical access to a device or board, need to identify test pads and get a serial/root shell, want to read a flash chip with flashrom, or are evaluating a fixed- vs rolling-code radio in a shielded lab.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-hardware-interfaces/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-jwt",
+      "name": "attacking-jwt",
+      "description": "Attack JSON Web Tokens by breaking the server's signature-verification decision \u2014 alg:none and its case variants, RS256-to-HS256 key confusion using the public key as an HMAC secret, weak HMAC secret cracking, jku/x5u/kid/jwk header injection, embedded-key self-signing, claim tampering, and algorithm-confusion bugs like the ES256 psychic-signature CVE. Use when a request contains a token starting with eyJ, when an Authorization: Bearer header carries a JWT, or when a JWT sits in a cookie, localStorage, session storage, or query parameter.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-jwt/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-kerberos-delegation",
+      "name": "attacking-kerberos-delegation",
+      "description": "Identify and abuse Active Directory Kerberos delegation \u2014 unconstrained delegation with printer-bug coercion, constrained delegation with protocol transition (S4U2Self/S4U2Proxy), and resource-based constrained delegation via machine-account creation and msDS-AllowedToActOnBehalfOfOtherIdentity. Use when BloodHound or enumeration flags delegation, when you control an account with an SPN or GenericWrite over a computer, or when escalating within a domain.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-kerberos-delegation/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-oauth-oidc",
+      "name": "attacking-oauth-oidc",
+      "description": "Attack OAuth 2.0 and OpenID Connect flows \u2014 enumerate endpoints from the OIDC discovery document, break redirect_uri validation with path traversal, open-redirect chaining, subdomain and regex weakness, and %2F/@ parser tricks, exploit missing state (callback CSRF) and absent or downgraded PKCE, steal codes and tokens via open redirectors and referer leakage, replay and inject authorization codes across clients, escalate scope and bypass consent, confuse access_token with id_token, and take over accounts through \"Sign in with X\" email trust and device-code consent phishing. Use when you see /authorize, /oauth/token, response_type, redirect_uri, client_id, code= or state= parameters, a \"Sign in with Google/Microsoft/GitHub\" button, or an OIDC discovery document at /.well-known/openid-configuration.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-oauth-oidc/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-saml",
+      "name": "attacking-saml",
+      "description": "Attack SAML single sign-on by decoding and tampering with signed XML assertions \u2014 XML signature wrapping (XSW1-XSW8), signature stripping, assertion and attribute tampering, NameID comment injection, XXE through the SAML parser, certificate faking, recipient confusion and IdP-initiated replay, and Golden SAML forgery. Use when a request carries a `SAMLRequest` or `SAMLResponse` parameter, when base64+deflate decodes to XML with `<saml:Assertion>`, when the target exposes a `/saml/acs` or `/sso` endpoint, when an IdP-initiated login lands an assertion at the SP, or when federation runs through Okta, ADFS, Ping, or Azure/Entra.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-saml/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-serverless",
+      "name": "attacking-serverless",
+      "description": "Attack serverless compute \u2014 AWS Lambda, Azure Functions, GCP Cloud Functions, and edge runtimes like Cloudflare Workers. Enumerate functions, inject through event sources (S3, SQS, SNS, API Gateway, EventBridge), extract credentials from the execution environment, abuse over-privileged IAM roles, exploit cold-start persistence and container reuse, and test trigger misconfigurations. Use when a target runs serverless functions, when API Gateway or function URLs front compute, when event-driven architectures process untrusted input, or when cloud function execution roles need privilege-escalation testing.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-serverless/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/attacking-wireless-networks",
+      "name": "attacking-wireless-networks",
+      "description": "Attack WiFi networks using WPA/WPA2 cracking, WPS exploitation, Evil Twin attacks, deauthentication, and wireless reconnaissance. Use when pentesting wireless networks or performing WiFi security assessments.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/attacking-wireless-networks/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/bypassing-mobile-pinning",
+      "name": "bypassing-mobile-pinning",
+      "description": "Diagnose and defeat TLS interception failures in mobile apps \u2014 certificate pinning, Android Network Security Config, user-CA distrust, native BoringSSL pinning, and mutual TLS \u2014 using objection, Frida, SSL Kill Switch, and APK patching. Use when Burp, mitmproxy, or Charles shows a TLS handshake error, an empty proxy, or \"network error\" from a mobile app, or when a target is known to pin certificates.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/bypassing-mobile-pinning/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/bypassing-root-jailbreak-detection",
+      "name": "bypassing-root-jailbreak-detection",
+      "description": "Defeat root, jailbreak, emulator, debugger, and Frida detection in mobile apps using Magisk DenyList, Zygisk modules, objection, and targeted Frida hooks, and understand where hardware-backed attestation like Play Integrity cannot be hooked. Use when an app exits, shows \"device not secure\", or silently fails on a rooted device or emulator, or when Frida attaches and the app immediately dies.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/bypassing-root-jailbreak-detection/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/cracking-passwords",
+      "name": "cracking-passwords",
+      "description": "Crack password hashes using hashcat/john, perform password spraying, brute force authentication, and execute pass-the-hash attacks. Use when cracking credentials or performing password-based attacks.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/cracking-passwords/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/enumerating-network-services",
+      "name": "enumerating-network-services",
+      "description": "Enumerate and exploit network services including SMB, FTP, SSH, RDP, HTTP, databases (MySQL, MSSQL, PostgreSQL, MongoDB), LDAP, NFS, DNS, and SNMP. Use when testing network service security or performing port-based exploitation.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/enumerating-network-services/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/escalating-linux-privileges",
+      "name": "escalating-linux-privileges",
+      "description": "Escalate privileges on Linux systems using SUID/SGID binaries, capabilities, sudo misconfigurations, cron jobs, kernel exploits, and container escapes. Use when performing Linux post-exploitation or privilege escalation.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/escalating-linux-privileges/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/escalating-windows-privileges",
+      "name": "escalating-windows-privileges",
+      "description": "Escalate privileges on Windows systems using service misconfigurations, DLL hijacking, token manipulation, UAC bypasses, registry exploits, and credential dumping. Use when performing Windows post-exploitation or privilege escalation.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/escalating-windows-privileges/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/escaping-hardened-containers",
+      "name": "escaping-hardened-containers",
+      "description": "Escape containers that drop capabilities, enforce seccomp profiles, and run behind AppArmor or SELinux \u2014 enumerating residual capabilities, analyzing seccomp filters, abusing single-capability escapes, cgroup release agents, filesystem mounts, and runtime CVEs. Use when a container has no --privileged flag but retains exploitable capabilities, when seccomp or LSM blocks standard escape paths, when targeting gVisor or Kata sandboxes, or when reviewing a hardened container deployment for residual attack surface.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/escaping-hardened-containers/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/establishing-persistence",
+      "name": "establishing-persistence",
+      "description": "Establish persistence on Windows and Linux systems using registry keys, scheduled tasks, services, cron jobs, SSH keys, backdoor accounts, and rootkits. Use when performing post-exploitation or maintaining long-term access.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/establishing-persistence/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-cloud-platforms",
+      "name": "exploiting-cloud-platforms",
+      "description": "Exploit AWS, Azure, and GCP cloud misconfigurations including S3 buckets, IAM roles, metadata services, serverless functions, and cloud-specific privilege escalation. Use when pentesting cloud environments or assessing cloud security.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-cloud-platforms/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-containers",
+      "name": "exploiting-containers",
+      "description": "Escape Docker containers and exploit Kubernetes clusters using privileged containers, Docker socket access, misconfigurations, and API abuse. Use when testing container security or performing container escape.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-containers/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-deserialization",
+      "name": "exploiting-deserialization",
+      "description": "Identify and exploit insecure deserialization across Java, .NET, PHP, Python, and Ruby \u2014 recognizing serialized formats by magic bytes, finding gadget chains with ysoserial and ysoserial.net, and detecting blind cases via DNS or timing. Use when a request contains base64 starting with rO0AB or AAEAAAD, when a cookie or parameter holds a serialized object, or when reviewing readObject, unserialize, pickle.loads, or Marshal.load.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-deserialization/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-memory-corruption",
+      "name": "exploiting-memory-corruption",
+      "description": "Develop working exploits from memory-corruption bugs in native binaries \u2014 turning a stack/heap overflow, use-after-free, or type confusion into control flow, an arbitrary read/write, and a shell, and defeating ASLR, NX, stack canaries, PIE, and RELRO along the way. Use when you have a crashing input or a known bug class in an ELF/PE and need a primitive, when building a ROP chain with pwntools and ROPgadget, or when working a CTF pwn challenge or authorized binary exploitation.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-memory-corruption/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-ssrf",
+      "name": "exploiting-ssrf",
+      "description": "Find and exploit server-side request forgery \u2014 reaching cloud instance metadata on AWS IMDSv1/IMDSv2, Azure IMDS, and GCP, internal service discovery, filter and allowlist bypasses via DNS rebinding, redirects, and encoding, and blind SSRF confirmation out of band. Use when an application fetches a URL supplied by the user, when testing webhooks, importers, PDF or screenshot renderers, or when reviewing outbound HTTP calls in source.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-ssrf/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-web3-smart-contracts",
+      "name": "exploiting-web3-smart-contracts",
+      "description": "Audit and exploit smart contracts and Web3 applications including reentrancy, integer overflow, access control flaws, and DeFi-specific vulnerabilities. Use when testing blockchain applications or performing smart contract audits.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-web3-smart-contracts/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/exploiting-xxe",
+      "name": "exploiting-xxe",
+      "description": "Exploit XML External Entity injection to read local files and reach internal services \u2014 in-band file read, php://filter base64 wrappers, SSRF to cloud metadata, blind out-of-band exfiltration with an external DTD, parameter entities, XInclude, and SVG/Office-document vectors. Use when an endpoint accepts XML (`Content-Type: application/xml`, `text/xml`, or a SOAP envelope), a file upload parses SVG, DOCX, XLSX, PPTX, PDF, or raw XML, a request body starts with `<?xml`, or the target consumes SAML.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/exploiting-xxe/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/performing-reconnaissance",
+      "name": "performing-reconnaissance",
+      "description": "Perform OSINT, subdomain enumeration, port scanning, web reconnaissance, email harvesting, and cloud asset discovery for initial access. Use when gathering intelligence or mapping attack surface.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/performing-reconnaissance/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/performing-social-engineering",
+      "name": "performing-social-engineering",
+      "description": "Conduct phishing campaigns, credential harvesting, pretexting, and social engineering attacks using tools like Gophish, SET, and custom techniques. Use when performing social engineering assessments or red team engagements.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/performing-social-engineering/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/recognizing-deception",
+      "name": "recognizing-deception",
+      "description": "Recognize defensive deception during an engagement \u2014 honeypots, honeytokens and canary tokens, decoy AD accounts and shares, canary files, and deceptive cloud credentials \u2014 before interacting with them, and handle a suspected decoy without burning the engagement. Use when a target is unexpectedly easy, when credentials or a service appear in an implausible place, when a privileged account has no logon history, when a file or bucket looks like bait, or when deciding whether to use credentials of unknown provenance.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/recognizing-deception/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-ics-ot-protocols",
+      "name": "testing-ics-ot-protocols",
+      "description": "Test Industrial Control Systems and Operational Technology protocols \u2014 Modbus, DNP3, OPC UA, BACnet, EtherNet/IP, S7comm, MQTT \u2014 with safety-first methodology for SCADA and ICS environments. Use when assessing OT network security, testing ICS protocol authentication, reviewing IT-OT segmentation, or performing authorized ICS penetration testing.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-ics-ot-protocols/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-thick-clients",
+      "name": "testing-thick-clients",
+      "description": "Security-test desktop thick-client applications (.NET/WPF, Java, Electron, native Win32) against their local and network attack surface \u2014 proxying non-HTTP traffic, extracting secrets and DB connection strings from config/registry/memory, bypassing client-side trust controls, and reviewing update channels and DLL search order. Use when assessing an installed desktop app that talks to a backend, when Burp sees no traffic from a fat client, or when a two-tier app connects straight to a database.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-thick-clients/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "trilwu/secskills-offense/transferring-files",
+      "name": "transferring-files",
+      "description": "Transfer files between systems using HTTP, SMB, FTP, netcat, base64 encoding, and living-off-the-land techniques for both Linux and Windows. Use when moving tools or exfiltrating data.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/transferring-files/SKILL.md",
+      "category": "offensive"
+    },
+    {
+      "id": "masriyan/04-reverse-engineering",
+      "name": "Reverse Engineering & Binary Analysis",
+      "description": "Binary analysis, assembly interpretation, disassembly, decompilation, firmware RE, and protocol reverse engineering",
+      "source": "masriyan",
+      "license": "MIT",
+      "path": "vendored/masriyan/skills/04-reverse-engineering/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/dwarf-expert/dwarf-expert",
+      "name": "dwarf-expert",
+      "description": "Analyzes DWARF debug information in compiled binaries. Use when inspecting .debug_* sections, DIE trees, or DW_TAG_/DW_AT_ entries with dwarfdump/llvm-dwarfdump or readelf, verifying debug info with llvm-dwarfdump --verify, answering DWARF standard questions, or writing code that parses DWARF (libdwarf, pyelftools, gimli).",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/audit-augmentation",
+      "name": "audit-augmentation",
+      "description": "> Augments Trailmark code graphs with external audit findings from SARIF static analysis results, weAudit annotation files, and version-gated Trailmark 0.4.x binary-analysis graph exports. Maps findings to graph nodes by file and line overlap, creates severity-based subgraphs, and enables cross-referencing findings with pre-analysis data (blast radius, taint, etc.). Use when projecting SARIF results onto a code graph, overlaying weAudit annotations, importing binary graph findings, cross-referencing Semgrep, CodeQL, or binary-analysis findings with call graph data, or visualizing audit findings in the context of code structure.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/audit-augmentation/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/diagramming-code",
+      "name": "diagramming-code",
+      "description": "> Generates Mermaid diagrams from Trailmark code graphs. Produces call graphs, class hierarchies, module dependency maps, containment diagrams, complexity heatmaps, and attack surface data flow visualizations. Use when visualizing code architecture, drawing call graphs, generating class diagrams, creating dependency maps, producing complexity heatmaps, or visualizing data flow and attack surface paths as Mermaid diagrams.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/diagramming-code/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/graph-evolution",
+      "name": "graph-evolution",
+      "description": "> Compares Trailmark code graphs at two source code snapshots (git commits, tags, or directories) to surface security-relevant structural changes. Detects new attack paths, complexity shifts, blast radius growth, taint propagation changes, and privilege boundary modifications that text diffs miss. Use when comparing code between commits or tags, analyzing structural evolution, detecting attack surface growth, reviewing what changed between audit snapshots, or finding security-relevant changes that text diffs miss.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/graph-evolution/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/slicing-code-context",
+      "name": "slicing-code-context",
+      "description": "Selects bounded, graph-informed source slices with Trailmark and delegates focused code analysis or patch-proposal work to a smaller subagent. Use when offloading function-, class-, caller-, callee-, call-path-, entrypoint-, or line-focused code tasks to constrained or locally hosted models without exposing the full repository.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/slicing-code-context/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark",
+      "name": "trailmark",
+      "description": "Builds and queries multi-language source and binary code graphs for security analysis. Includes pre-analysis passes for blast radius, taint propagation, privilege boundaries, entry point enumeration, proxy/unresolved-call tracking, type/reference queries, structural traversal, graph diffs, audit augmentation, declared cross-language/FFI/external links via `.trailmark/links.toml`, and SQL schema graphs. Use when analyzing call paths, mapping attack surface, finding complexity hotspots, enumerating entry points, tracing taint propagation, measuring blast radius, importing SARIF/weAudit/binary findings, linking source graphs across language or RPC boundaries, or building a code graph for audit prioritization. Feature-gate version-specific Trailmark APIs before using them; prefer `trailmark.parse.detect_languages()` or `--language auto` when the target language is unknown or polyglot.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark-finding-triage",
+      "name": "trailmark-finding-triage",
+      "description": "Performs graph-assisted triage of a single security finding, SARIF result, weAudit annotation, suspicious function, or report excerpt using Trailmark reachability, entrypoint paths, taint, privilege-boundary, blast-radius, caller/callee, and neighborhood evidence. Use when deciding whether one candidate issue is reachable, prioritizing a finding before PoC work, preparing evidence for exploit validation, or checking whether a static-analysis result is actionable.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark-finding-triage/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark-review-gate",
+      "name": "trailmark-review-gate",
+      "description": "Runs a Trailmark structural review gate over a branch, pull request, fix commit, release diff, or git ref range to detect new entrypoints, new tainted paths, removed validation or authorization calls, privilege-boundary drift, blast-radius growth, complexity growth, and newly reachable sensitive sinks. Use when reviewing a PR, branch, remediation commit, or release diff where graph-level security regressions should be checked before merge.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark-review-gate/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark-structural",
+      "name": "trailmark-structural",
+      "description": "Runs full Trailmark structural analysis by building a graph, running `preanalysis()`, and reporting hotspots, taint, blast radius, privilege boundaries, attack surface, and version-gated Trailmark 0.4+/0.5+ data such as proxy counts, subgraph edges, type/reference summaries, and entrypoint attributes. Use when vivisect needs detailed structural data for a target. Triggers: structural analysis, blast radius, taint analysis, complexity hotspots, proxy nodes, type references.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark-structural/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark-summary",
+      "name": "trailmark-summary",
+      "description": "Runs a Trailmark summary analysis on a codebase. Returns auto-detected languages, entry point count, and dependency list. Use when vivisect or galvanize needs a quick structural overview. Triggers: trailmark summary, code summary, structural overview.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark-summary/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/trailmark/trailmark-variant-neighborhood",
+      "name": "trailmark-variant-neighborhood",
+      "description": "Expands one confirmed or suspected vulnerability into a Trailmark graph neighborhood of variant candidates by finding sibling functions, shared callers and callees, common sensitive sinks, common entrypoint paths, interface implementations, override relationships, type/reference neighbors, and structurally similar nodes. Use after one issue is found to seed variant-analysis, semgrep-rule-creator, static-analysis, or manual review with graph-derived candidate locations.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/trailmark-variant-neighborhood/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-binaries",
+      "name": "analyzing-binaries",
+      "description": "Reverse engineer compiled binaries, firmware, and mobile app packages using triage, static disassembly, decompilation, and dynamic instrumentation. Use when analyzing an executable, ELF/PE/Mach-O file, firmware image, or stripped binary, recovering an algorithm or protocol, or working a CTF reversing challenge.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-dotnet-assemblies",
+      "name": "analyzing-dotnet-assemblies",
+      "description": "Reverse engineer .NET assemblies and executables with dnSpyEx, ILSpy, and de4dot \u2014 identifying and unwrapping obfuscators and packers, deobfuscating control flow and string encryption, handling single-file and NativeAOT publishes, and patching IL. Use when a binary is a managed PE, when ILSpy shows mangled names or empty method bodies, or when analyzing .NET malware, a loader, or a Windows application.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-dotnet-assemblies/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-firmware-images",
+      "name": "analyzing-firmware-images",
+      "description": "Extract, analyze, and assess firmware images from embedded devices, IoT hardware, routers, and similar targets \u2014 filesystem extraction, hardcoded credential discovery, binary analysis across architectures, web interface review, network service enumeration, emulation, and cryptographic assessment. Use when analyzing a firmware update file, reviewing IoT device security, hunting for hardcoded secrets in device firmware, or assessing the attack surface of an embedded system.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-firmware-images/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-go-binaries",
+      "name": "analyzing-go-binaries",
+      "description": "Reverse engineer Go binaries by recovering function names and types from pclntab and moduledata using GoReSym, redress, and IDA/Ghidra Go plugins, and by reading Go's non-standard calling convention, interface dispatch, and string layout. Use when a binary contains Go runtime strings, when strings show runtime.main or go:buildid, when a stripped binary is unexpectedly large, or when analyzing Go malware or a Go-based service.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-go-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-ios-binaries",
+      "name": "analyzing-ios-binaries",
+      "description": "Analyze iOS applications at the binary level \u2014 decrypting FairPlay-protected IPAs with frida-ios-dump or bagbak, inspecting Mach-O load commands, recovering Objective-C headers with class-dump, and reading Swift metadata. Use when working with an IPA or .app bundle, when a downloaded App Store binary shows cryptid=1, when class-dump returns nothing, or when analyzing iOS frameworks and app extensions.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-ios-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-macos-binaries",
+      "name": "analyzing-macos-binaries",
+      "description": "Reverse engineer and security-review macOS applications and Mach-O binaries \u2014 thinning universal binaries, recovering Objective-C/Swift structure, reading code-signing entitlements and the hardened runtime, and auditing XPC services, dylib load paths, and TCC privacy exposure. Use when analyzing a .app bundle or Mach-O on macOS, checking entitlements and notarization, hunting a dylib-hijack or XPC privilege bug, or reasoning about Gatekeeper and quarantine.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-macos-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/analyzing-rust-binaries",
+      "name": "analyzing-rust-binaries",
+      "description": "Reverse engineer Rust binaries \u2014 demangling legacy and v0 symbol schemes, recognizing monomorphized generics, Result and Option control flow, trait object vtable dispatch, and panic-site strings that leak source paths and crate names. Use when a binary contains rustc version strings, core::panicking, or _ZN/_R mangled symbols, when a stripped binary is unexpectedly large, or when analyzing Rust malware or a Rust service.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/analyzing-rust-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/devirtualizing-vm-protected-code",
+      "name": "devirtualizing-vm-protected-code",
+      "description": "Recover the original logic from code protected by a virtualization obfuscator \u2014 VMProtect, Themida/WinLicense, Code Virtualizer, or a custom opcode VM \u2014 by locating the VM dispatcher, reverse-engineering the handlers into semantics, extracting the virtual bytecode, and lifting it to a simplified IR with Triton, miasm, or VTIL-based tools. Use when a function became a giant fetch-decode-dispatch loop, when analysis shows a handler table instead of normal code, or after unpacking reveals a virtualized core.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/devirtualizing-vm-protected-code/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/diffing-binary-patches",
+      "name": "diffing-binary-patches",
+      "description": "Locate the vulnerability a security patch fixes by diffing the pre- and post-patch binaries \u2014 using BinDiff, Diaphora, or ghidriff to find the changed functions, reading the added checks to recover the bug class, and reasoning back to a reachable pre-patch trigger for 1-day analysis. Use when comparing two versions of a DLL/ELF, extracting a Microsoft patch from an MSU/MSP for delta comparison, or turning a vague advisory into the exact code that changed.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/diffing-binary-patches/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-browser-extensions",
+      "name": "reversing-browser-extensions",
+      "description": "Reverse engineer and security-review Chrome/Firefox browser extensions \u2014 unpacking the CRX/XPI, reading the manifest for over-broad permissions, and tracing the trust boundary between page, content script, background service worker, and native messaging host. Use when analyzing a suspicious or over-permissioned extension, auditing your own extension's privilege model, or investigating how a content script exposes privileged APIs to a web page.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-browser-extensions/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-flutter-apps",
+      "name": "reversing-flutter-apps",
+      "description": "Reverse engineer and intercept traffic from Flutter/Dart mobile apps using blutter, reFlutter, and Frida. Use when an APK or IPA contains libflutter.so, libapp.so, App.framework, or flutter_assets, when jadx shows only a thin Dart wrapper, when Burp or mitmproxy sees no traffic from an app that is clearly online, or when the target is described as built with Flutter or Dart.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-flutter-apps/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-obfuscated-javascript",
+      "name": "reversing-obfuscated-javascript",
+      "description": "Reverse engineer minified, bundled, and obfuscated browser/Node JavaScript \u2014 unpacking webpack chunks, recovering source from sourcemaps, undoing obfuscator.io string-array and control-flow obfuscation with webcrack/synchrony/restringer, and locating a signing or crypto routine in a live bundle via Chrome DevTools. Use when a page ships a huge minified bundle, when code is full of _0x hex identifiers and a rotated string array, when a .js.map is reachable, or when you must find where a request signature or token is computed.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-obfuscated-javascript/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-react-native-apps",
+      "name": "reversing-react-native-apps",
+      "description": "Reverse engineer React Native mobile apps, including Hermes bytecode bundles, using hbctool, hermes-dec, and Frida. Use when an APK contains index.android.bundle or libhermes.so, when an IPA contains main.jsbundle, when jadx shows only ReactActivity classes, or when a bundle file starts with the Hermes magic bytes instead of readable JavaScript.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-react-native-apps/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-unity-il2cpp",
+      "name": "reversing-unity-il2cpp",
+      "description": "Reverse engineer Unity games and apps built with IL2CPP or Mono, using Il2CppDumper, Il2CppInspector, and dnSpy. Use when an APK or IPA contains global-metadata.dat, libil2cpp.so, UnityFramework, or Assembly-CSharp.dll, when jadx shows only UnityPlayerActivity, or when the target is described as a Unity build.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-unity-il2cpp/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/reversing-xamarin-maui",
+      "name": "reversing-xamarin-maui",
+      "description": "Reverse engineer Xamarin and .NET MAUI mobile apps by extracting assemblies.blob and XALZ-compressed DLLs with pyxamstore, then decompiling with dnSpy or ILSpy. Use when an APK contains libmonodroid.so, libmonosgen, assemblies.blob, assemblies/*.dll, or libxamarin-app.so, when an IPA contains Mono assemblies, or when jadx shows only Xamarin bootstrap classes.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/reversing-xamarin-maui/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-core/unpacking-protected-binaries",
+      "name": "unpacking-protected-binaries",
+      "description": "Unpack and dump protected executables \u2014 UPX and commodity packers, custom crypters, commercial protectors like Themida and VMProtect, and .NET packers \u2014 by finding the original entry point, dumping from memory, and rebuilding the import table with Scylla, pe-sieve, or x64dbg. Use when a binary has high entropy, few imports, unnamed sections, or when analysis tools show almost no code.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-core/skills/unpacking-protected-binaries/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trilwu/secskills-defense/analyzing-malware",
+      "name": "analyzing-malware",
+      "description": "Analyze suspected malware safely \u2014 containment, static triage, sandboxed detonation, unpacking, capability and C2 extraction, IOC production, and YARA rule authoring. Use when handed a suspicious file, hash, or sample, when triaging an alert artifact, or when producing detection content from a specimen.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-defense/skills/analyzing-malware/SKILL.md",
+      "category": "reverse-engineering"
+    },
+    {
+      "id": "trailofbits/zeroize-audit/zeroize-audit",
+      "name": "zeroize-audit",
+      "description": "Detects missing zeroization of sensitive data in source code and identifies zeroization removed by compiler optimizations, with assembly-level analysis, and control-flow verification. Use for auditing C/C++/Rust code handling secrets, keys, passwords, or other sensitive data.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/zeroize-audit/skills/zeroize-audit/SKILL.md",
+      "category": "secrets-config"
+    },
+    {
+      "id": "trailofbits/burpsuite-project-parser/burpsuite-project-parser",
+      "name": "burpsuite-project-parser",
+      "description": "Searches and explores Burp Suite project files (.burp) from the command line. Use when searching response headers or bodies with regex patterns, extracting security audit findings, dumping proxy history or site map data, or analyzing HTTP traffic captured in a Burp project.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+      "category": "web-api"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-apis",
+      "name": "testing-apis",
+      "description": "Test REST and GraphQL APIs for authentication bypasses, authorization flaws, IDOR, mass assignment, injection attacks, and rate limiting issues. Use when pentesting APIs or testing microservices security.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-apis/SKILL.md",
+      "category": "web-api"
+    },
+    {
+      "id": "trilwu/secskills-offense/testing-web-applications",
+      "name": "testing-web-applications",
+      "description": "Test web applications for security vulnerabilities including SQLi, XSS, command injection, JWT attacks, SSRF, file uploads, XXE, and API flaws. Use when pentesting web apps, analyzing authentication, or exploiting OWASP Top 10 vulnerabilities.",
+      "source": "trilwu",
+      "license": "MIT",
+      "path": "vendored/trilwu/secskills-offense/skills/testing-web-applications/SKILL.md",
+      "category": "web-api"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/algorand-vulnerability-scanner",
+      "name": "algorand-vulnerability-scanner",
+      "description": "Scans Algorand smart contracts for 11 common vulnerabilities including rekeying attacks, unchecked transaction fees, missing field validations, and access control issues. Use when auditing Algorand projects (TEAL/PyTeal).",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/algorand-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/audit-prep-assistant",
+      "name": "audit-prep-assistant",
+      "description": "Prepares codebases for security review using Trail of Bits' checklist. Helps set review goals, runs static analysis tools, increases test coverage, removes dead code, ensures accessibility, and generates documentation (flowcharts, user stories, inline comments). Use when preparing your own codebase to be audited by someone else, getting a repository review-ready before an external security review, deciding what to fix before auditors start, or asking what assessors need from a project. For understanding unfamiliar code you are about to audit, use audit-context-building instead.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/cairo-vulnerability-scanner",
+      "name": "cairo-vulnerability-scanner",
+      "description": "Scans Cairo/StarkNet smart contracts for 6 critical vulnerabilities including felt252 arithmetic overflow, L1-L2 messaging issues, address conversion problems, and signature replay. Use when auditing StarkNet projects.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/cairo-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/code-maturity-assessor",
+      "name": "code-maturity-assessor",
+      "description": "Systematic code maturity assessment using Trail of Bits' 9-category framework. Analyzes codebase for arithmetic safety, auditing practices, access controls, complexity, decentralization, documentation, MEV risks, low-level code, and testing, then produces a scorecard with evidence-based ratings and a priority-ordered roadmap. Use when assessing or scoring the maturity of a smart contract or blockchain codebase, producing a maturity scorecard or evaluation, or judging how mature, well-tested, or well-documented such a project is against a rubric.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/cosmos-vulnerability-scanner",
+      "name": "cosmos-vulnerability-scanner",
+      "description": "Scans Cosmos SDK blockchain modules and CosmWasm contracts for consensus-critical vulnerabilities \u2014 chain halts, fund loss, state divergence. 25 core + 16 IBC + 10 EVM + 3 CosmWasm patterns. Use when auditing custom x/ modules, reviewing IBC integrations, or assessing pre-launch chain security. Updated for SDK v0.53.x.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/guidelines-advisor",
+      "name": "guidelines-advisor",
+      "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Use when asking whether a smart contract project follows development best practices, reviewing on-chain/off-chain split, upgradeability, or delegatecall proxy patterns against guidelines, or seeking recommendations on contract design, inheritance, events, documentation, dependencies, or test strategy.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/secure-workflow-guide",
+      "name": "secure-workflow-guide",
+      "description": "Guides through Trail of Bits' 5-step secure development workflow. Runs Slither scans, checks special features (upgradeability/ERC conformance/token integration), generates visual security diagrams, helps document security properties for fuzzing/verification, and reviews manual security areas. Use when securing a smart contract end to end rather than hunting one bug, checking a project on every check-in or before deployment, triaging a Slither report, or asking where to start on smart contract security.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/secure-workflow-guide/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/solana-vulnerability-scanner",
+      "name": "solana-vulnerability-scanner",
+      "description": "Scans Solana programs for 6 critical vulnerabilities including arbitrary CPI, improper PDA validation, missing signer/ownership checks, and sysvar spoofing. Use when auditing Solana/Anchor programs.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/solana-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/substrate-vulnerability-scanner",
+      "name": "substrate-vulnerability-scanner",
+      "description": "Scans Substrate/Polkadot pallets for 7 critical vulnerabilities including arithmetic overflow, panic DoS, incorrect weights, and bad origin checks. Use when auditing Substrate runtimes or FRAME pallets.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/substrate-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/token-integration-analyzer",
+      "name": "token-integration-analyzer",
+      "description": "Token integration and implementation analyzer based on Trail of Bits' token integration checklist. Analyzes token implementations for ERC20/ERC721 conformity, checks for 20+ weird token patterns, assesses contract composition and owner privileges, performs on-chain scarcity analysis, and evaluates how protocols handle non-standard tokens. Use when integrating or accepting arbitrary ERC20/ERC721 tokens, auditing a token implementation for standards conformity, or assessing risk from weird tokens such as fee-on-transfer, rebasing, missing return values, or blocklists.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/building-secure-contracts/ton-vulnerability-scanner",
+      "name": "ton-vulnerability-scanner",
+      "description": "Scans TON (The Open Network) smart contracts for 3 critical vulnerabilities including integer-as-boolean misuse, fake Jetton contracts, and forward TON without gas checks. Use when auditing FunC contracts.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/building-secure-contracts/skills/ton-vulnerability-scanner/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/entry-point-analyzer/entry-point-analyzer",
+      "name": "entry-point-analyzer",
+      "description": "Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, categorizes them by access level (public, admin, role-restricted, contract-only), and generates structured audit reports. Excludes view/pure/read-only functions. Use when auditing smart contracts (Solidity, Vyper, Solana/Rust, Move, TON, CosmWasm) or when asked to find entry points, audit flows, external functions, access control patterns, or privileged operations.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/entry-point-analyzer/skills/entry-point-analyzer/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/property-based-testing/property-based-testing",
+      "name": "property-based-testing",
+      "description": "Writes, reviews, and debugs property-based tests \u2014 Hypothesis, fast-check, proptest, jqwik, rapid, and Echidna or Medusa for Solidity invariants. Use whenever tests should cover a whole input domain instead of a hand-picked list of examples: encode/decode and serialize/deserialize pairs, parsers, canonicalizers and normalizers, validators, numeric and Decimal types, comparators and sort order, data structures, and smart-contract state invariants. Also use when adding cases to an existing @given, fast-check, or proptest suite, when judging whether existing property tests assert anything real, and when a generator has shrunk a counterexample and you need to tell a wrong property from a genuine bug. Not for coverage-guided binary fuzzing (libFuzzer, AFL), mutation-testing campaigns, static analysis, benchmarking, or end-to-end UI tests.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+      "category": "web3"
+    },
+    {
+      "id": "trailofbits/trailmark/genotoxic",
+      "name": "genotoxic",
+      "description": "Graph-informed mutation testing triage. Parses codebases with Trailmark, runs mutation testing and necessist, then uses survived mutants, unnecessary test statements, and call graph data to identify false positives, missing test coverage, and fuzzing targets. Use when triaging survived mutants, analyzing mutation testing results, identifying test gaps, finding fuzzing targets from weak tests, running mutation frameworks (including circomvent and cairo-mutants), or using necessist.",
+      "source": "trailofbits",
+      "license": "CC-BY-SA-4.0",
+      "path": "vendored/trailofbits/plugins/trailmark/skills/genotoxic/SKILL.md",
+      "category": "web3"
+    }
+  ]
+}

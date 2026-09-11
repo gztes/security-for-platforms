@@ -1,0 +1,32 @@
+# Upstream sources vendored into this repo.
+# Pinned to a commit SHA. To update a source: bump the sha, re-run scripts/sync.py,
+# and READ THE DIFF before committing — skills are prompts Claude executes, and
+# some ship runnable scripts. Never auto-pull unreviewed changes.
+sources:
+  - key: trailofbits
+    repo: trailofbits/skills
+    sha: 321ccfe628eca0d314b0ee4eaffcdd8a05639aaf
+    license: CC-BY-SA-4.0
+    license_file: LICENSES/trailofbits-CC-BY-SA-4.0.txt
+    homepage: https://github.com/trailofbits/skills
+    dir: vendored/trailofbits
+    # Skills live one-per-plugin under plugins/<plugin>/skills/<skill>/SKILL.md
+    scan_root: vendored/trailofbits/plugins
+
+  - key: masriyan
+    repo: Masriyan/Claude-Code-CyberSecurity-Skill
+    sha: 42e150160396a2e0e9e9ef7caf07bcefa2731212
+    license: MIT
+    license_file: LICENSES/masriyan-MIT.txt
+    homepage: https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill
+    dir: vendored/masriyan
+    scan_root: vendored/masriyan/skills
+
+  - key: trilwu
+    repo: trilwu/secskills
+    sha: ca53957bcd8e3b83b5d4d190bb3ad008a4f15c84
+    license: MIT
+    license_file: LICENSES/trilwu-MIT.txt
+    homepage: https://github.com/trilwu/secskills
+    dir: vendored/trilwu
+    scan_root: vendored/trilwu

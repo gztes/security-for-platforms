@@ -1,0 +1,11 @@
+# Local re-vendoring cache used by scripts/sync.py (not committed; see sources.yaml)
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,139 @@
+# The curation layer. sync.py reads this to place every skill into a category and
+# to build the README. Editing this file is how you change the database's shape.
+#
+# Placement order for each skill:
+#   1. `overrides` (skill id -> category) wins.
+#   2. otherwise first category whose `match` keyword appears in the skill's
+#      source-path + name + description.
+#   3. otherwise -> "uncategorized" (surfaces new upstream skills to triage).
+# Anything whose path matches `exclude_paths` is dropped from the catalog entirely.
+
+# Dropped: test fixtures (not real skills) and a few non-security ToB plugins.
+exclude_paths:
+  - "/tests/"
+exclude_ids:
+  - "trailofbits/culture-index/interpreting-culture-index"   # HR personality tool
+  - "trailofbits/let-fate-decide/let-fate-decide"            # tarot entropy, not security
+  - "trailofbits/goal-prompt/goal-prompt"                    # prompt-writing helper
+  - "trailofbits/git-cleanup/git-cleanup"                    # git hygiene, not security
+
+# Checked BEFORE keyword matching (but after overrides): a skill whose NAME starts
+# with one of these is attacker tradecraft and belongs under "offensive", whatever
+# topic it touches. Stops "attacking-entra-id" landing under Auth, etc.
+offensive_name_prefixes:
+  - attacking-
+  - exploiting-
+  - escalating-
+  - abusing-
+  - cracking-
+  - establishing-
+  - escaping-
+  - bypassing-
+  - performing-
+  - transferring-files
+  - enumerating-network
+  - recognizing-deception
+  - maintaining-engagement
+  - orchestrating-vulnerability
+
+# skill id -> forced category. Wins over everything.
+overrides:
+  trailofbits/audit-context-building/audit-context-building: code-review
+  trailofbits/github-triage/github-triage: meta-tooling
+  trailofbits/testing-handbook-skills/testing-handbook-generator: meta-tooling
+  trailofbits/open-sourcing/open-sourcing: meta-tooling
+  trailofbits/constant-time-analysis/constant-time-analysis: crypto
+  trailofbits/claude-in-chrome-troubleshooting/chrome-mcp-troubleshooting: meta-tooling
+  trilwu/secskills-defense/defending-kubernetes: detection-intel
+  trilwu/secskills-defense/hardening-cloud-posture: detection-intel
+  trilwu/secskills-core/analyzing-firmware-images: reverse-engineering
+  trilwu/secskills-defense/investigating-aws-incidents: dfir
+  trilwu/secskills-defense/investigating-azure-incidents: dfir
+  trilwu/secskills-core/hunting-web-backdoors: dfir
+  trailofbits/sharp-edges/sharp-edges: code-review
+
+# The "start here" set for someone securing a vibe-coded app/website.
+starter:
+  - "trailofbits/differential-review/differential-review"
+  - "trailofbits/supply-chain-risk-auditor/supply-chain-risk-auditor"
+  - "trilwu/secskills-core/reviewing-code-changes"
+  - "trilwu/secskills-core/auditing-code-for-vulnerabilities"
+  - "masriyan/09-web-security"
+  - "masriyan/02-vulnerability-scanner"
+  - "trilwu/secskills-core/securing-ai-systems"
+  - "trailofbits/agentic-actions-auditor/agentic-actions-auditor"
+  - "trilwu/secskills-core/auditing-supply-chain"
+  - "masriyan/19-grc-compliance"
+
+# Ordered categories, most specific first. First keyword hit wins (after the
+# override map and the offensive-name-prefix rule). `match` = lowercased substrings
+# tested against the skill's path + name + description.
+categories:
+  - id: ai-llm
+    title: "AI & LLM security"
+    blurb: "Prompt injection, agent/tool misuse, RAG leakage, model & MCP supply chain."
+    match: [ai-llm, ai-systems, securing-ai, agentic-actions, auditing-mcp, vetting-agent]
+  - id: web3
+    title: "Smart contracts & Web3"
+    blurb: "On-chain security: EVM and non-EVM contract scanners, DeFi bugs."
+    match: [secure-contracts, smart-contract, web3, solana, cairo, cosmos, substrate, algorand, ton-vuln, entry-point, token-integration, guidelines-advisor, secure-workflow, code-maturity]
+  - id: fuzzing
+    title: "Fuzzing & dynamic testing"
+    blurb: "libFuzzer, AFL++, Atheris, cargo-fuzz, sanitizers, coverage, harnesses."
+    match: [fuzz, aflpp, atheris, libfuzzer, libafl, ossfuzz, ruzzy, sanitizer, coverage-analysis, harness-writing, address-sanitizer]
+  - id: crypto
+    title: "Cryptography"
+    blurb: "Crypto misuse, constant-time analysis, TLS, formal proofs."
+    match: [reviewing-cryptography, constant-time, wycheproof, writing-lean-proofs, cryptograph, crypto-]
+  - id: reverse-engineering
+    title: "Reverse engineering & binaries"
+    blurb: "Disassembly, decompilation, firmware, packers, obfuscation, protocols."
+    match: [reverse-engineer, analyzing-binaries, analyzing-dotnet, analyzing-firmware, analyzing-go, analyzing-ios, analyzing-macos, analyzing-rust, dotnet-assemblies, firmware, go-binaries, macos-binaries, rust-binaries, devirtualizing, unpacking, obfuscated, browser-extensions, reversing-, network-protocols, diffing-binary, dwarf, trailmark, hardware-interfaces]
+  - id: dfir
+    title: "Incident response & forensics"
+    blurb: "DFIR: triage, memory/disk/network forensics, malware, cloud incident investigation."
+    match: [incident-response, responding-to-incidents, forensic, analyzing-memory, analyzing-disk, analyzing-network, analyzing-shellcode, analyzing-phishing, analyzing-malware, analyzing-linux-persistence, shellcode, windows-endpoint, investigating, malware, csoc, log-analysis, incident]
+  - id: detection-intel
+    title: "Detection, hunting & threat intel"
+    blurb: "Detection engineering, Sigma/YARA, threat hunting, CTI, defensive hardening."
+    match: [detection, engineering-detection, sigma, writing-yara, yara, threat-hunt, hunting-threats, threat-intel, threat-intelligence, producing-threat, mapping-attack, triaging-security, alerts, managing-vulnerabilit, defending-kubernetes, hardening-cloud, blue-team, purple-team]
+  - id: mobile
+    title: "Mobile security"
+    blurb: "Android/iOS app testing, pinning bypass, mobile IPC."
+    match: [mobile, ios-binaries, android, flutter, react-native, xamarin, il2cpp, pinning, jailbreak, mobile-ipc]
+  - id: cloud-container
+    title: "Cloud, containers & Kubernetes"
+    blurb: "AWS/Azure/GCP, Docker, and Kubernetes posture and hardening."
+    match: [cloud-security, cloud-platforms, kubernetes, container, eks-gke-aks, serverless, firebase]
+  - id: dependencies-supply-chain
+    title: "Dependencies & supply chain"
+    blurb: "Third-party package risk, SBOMs, typosquatting, CI/CD and OIDC trust."
+    match: [supply-chain, supply chain, ci-cd, ci/cd, dependency]
+  - id: secrets-config
+    title: "Secrets & insecure defaults"
+    blurb: "Hardcoded credentials, fallback secrets, dangerous default configuration, zeroization."
+    match: [insecure-default, fallback-secret, hardcoded, zeroize, default cred, default-cred]
+  - id: code-review
+    title: "Code review & static analysis"
+    blurb: "Diff review, language security review, SAST, semgrep/codeql, property & mutation testing."
+    match: [code-review, reviewing-code, auditing-code, auditing-php, differential-review, c-review, rust-review, modern-cpp, modern-python, semgrep, codeql, static-analysis, sarif, spec-to-code, sharp-edges, variant-analysis, fp-check, vulnerability-triage, property-based, mutation-testing, dimensional-analysis]
+  - id: web-api
+    title: "Web & API security"
+    blurb: "OWASP-style testing and review of web apps and APIs — the bugs vibe-coded sites ship."
+    match: [web-security, testing-web, testing-apis, testing-mobile-ipc, graphql, grpc, jwt, oauth, oidc, saml, ssrf, xxe, deserial, network-security, burpsuite]
+  - id: auth-identity
+    title: "Auth & identity"
+    blurb: "Login, sessions, tokens, SSO, Active Directory and cloud identity."
+    match: [broken-authentication, kerberos, active-directory, entra-id, adcs, single-sign]
+  - id: grc
+    title: "Governance, risk & compliance"
+    blurb: "Risk scoring, control mapping (NIST/ISO/SOC2), findings reporting."
+    match: [grc, compliance, reporting-security]
+  - id: meta-tooling
+    title: "Meta & workflow tooling"
+    blurb: "Skill authoring, devcontainers, gh CLI, second opinions, open-sourcing."
+    match: [authoring-security-skills, verifying-skill, devcontainer, gh-cli, second-opinion, code-improver, skill-improver, open-sourcing]
+  - id: offensive
+    title: "Offensive / penetration testing (authorized only)"
+    blurb: "Red-team tradecraft. Only against systems you are explicitly authorized to test."
+    match: [exploit, attacking, escalating, escaping, establishing-persistence, cracking, reconnaissance, recon-osint, social-engineering, red-team, wireless, bluetooth-nfc, ics-ot, ot-ics, ot-protocols, thick-clients, transferring-files, recognizing-deception, memory-corruption, orchestrating-vuln, maintaining-engagement, testing-ics]

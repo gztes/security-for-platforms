@@ -1,0 +1,253 @@
+{
+  "name": "security-skills",
+  "owner": {
+    "name": "gztes",
+    "url": "https://github.com/gztes"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Aggregated security skills for Claude Code from Trail of Bits, Masriyan, and trilwu \u2014 categorised for securing apps, sites, and companies. See README.md for the full index."
+  },
+  "plugins": [
+    {
+      "name": "tob-agentic-actions-auditor",
+      "source": "./vendored/trailofbits/plugins/agentic-actions-auditor",
+      "description": "Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations (Claude Code Action, Gemini CLI, OpenAI Codex, GitHub AI Inference)"
+    },
+    {
+      "name": "tob-audit-context-building",
+      "source": "./vendored/trailofbits/plugins/audit-context-building",
+      "description": "Understand a codebase before looking for bugs in it. Reads it function by function, records what each one assumes and depends on, and saves the write-ups to files instead of filling up the conversation."
+    },
+    {
+      "name": "tob-building-secure-contracts",
+      "source": "./vendored/trailofbits/plugins/building-secure-contracts",
+      "description": "Comprehensive smart contract security toolkit based on Trail of Bits' Building Secure Contracts framework. Includes vulnerability scanners for 6 blockchains and 5 development guideline assistants."
+    },
+    {
+      "name": "tob-burpsuite-project-parser",
+      "source": "./vendored/trailofbits/plugins/burpsuite-project-parser",
+      "description": "Search and extract data from Burp Suite project files (.burp) for security analysis"
+    },
+    {
+      "name": "tob-c-review",
+      "source": "./vendored/trailofbits/plugins/c-review",
+      "description": "Comprehensive C/C++ security code review, with coverage verified against a parse of the source"
+    },
+    {
+      "name": "tob-claude-in-chrome-troubleshooting",
+      "source": "./vendored/trailofbits/plugins/claude-in-chrome-troubleshooting",
+      "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues"
+    },
+    {
+      "name": "tob-code-improver",
+      "source": "./vendored/trailofbits/plugins/code-improver",
+      "description": "Improves code targets \u2014 skills, plugins, or a branch's changes \u2014 through an autonomous review-and-fix workflow with a pluggable reviewer (any installed skill or agent), a cross-round findings ledger, oscillation escalation, and a mechanical scope guard."
+    },
+    {
+      "name": "tob-plugin-dev",
+      "source": "./vendored/trailofbits/plugins/code-improver/tests/fixtures/plugin-dev",
+      "description": "Eval-only stand-in for the plugin-dev plugin: provides a skill-reviewer agent so cases exercising the skill-improver entry can run inside the isolated eval workspace, where the real marketplace plugin is not installed."
+    },
+    {
+      "name": "tob-pr-review-toolkit",
+      "source": "./vendored/trailofbits/plugins/code-improver/tests/fixtures/pr-review-toolkit",
+      "description": "Eval-only stand-in for the pr-review-toolkit plugin: provides a review-pr skill so cases exercising the pr-improver entry can run inside the isolated eval workspace, where the real plugin is not installed."
+    },
+    {
+      "name": "tob-review-panel",
+      "source": "./vendored/trailofbits/plugins/code-improver/tests/fixtures/review-panel",
+      "description": "Eval-only reviewer that orchestrates specialist subagents: provides the panel-review skill plus two auditor agents, so cases can prove the improvement loop executes a reviewer skill's dispatch plan instead of flattening it into one context."
+    },
+    {
+      "name": "tob-constant-time-analysis",
+      "source": "./vendored/trailofbits/plugins/constant-time-analysis",
+      "description": "Detect compiler-induced timing side-channels in cryptographic code"
+    },
+    {
+      "name": "tob-culture-index",
+      "source": "./vendored/trailofbits/plugins/culture-index",
+      "description": "Interprets Culture Index survey results for individuals and teams"
+    },
+    {
+      "name": "tob-devcontainer-setup",
+      "source": "./vendored/trailofbits/plugins/devcontainer-setup",
+      "description": "Create pre-configured devcontainers with Claude Code and language-specific tooling"
+    },
+    {
+      "name": "tob-differential-review",
+      "source": "./vendored/trailofbits/plugins/differential-review",
+      "description": "Security-focused differential review of code changes with git history analysis and blast radius estimation"
+    },
+    {
+      "name": "tob-dimensional-analysis",
+      "source": "./vendored/trailofbits/plugins/dimensional-analysis",
+      "description": "Annotates codebases with dimensional analysis comments documenting units, dimensions, and decimal scaling. Use when someone asks to annotate units in a codebase, perform a dimensional analysis, or find vulnerabilities in a DeFi protocol. Prevents dimensional mismatches and catches formula bugs early"
+    },
+    {
+      "name": "tob-dwarf-expert",
+      "source": "./vendored/trailofbits/plugins/dwarf-expert",
+      "description": "Analyze DWARF debug information: parse and search DIEs with dwarfdump and readelf, verify debug info integrity, and write DWARF parsing code"
+    },
+    {
+      "name": "tob-entry-point-analyzer",
+      "source": "./vendored/trailofbits/plugins/entry-point-analyzer",
+      "description": "Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, categorizes them by access level, and generates structured audit reports."
+    },
+    {
+      "name": "tob-firebase-apk-scanner",
+      "source": "./vendored/trailofbits/plugins/firebase-apk-scanner",
+      "description": "Scan Android APKs for Firebase security misconfigurations including open databases, storage buckets, authentication issues, and exposed cloud functions. For authorized security research only."
+    },
+    {
+      "name": "tob-fp-check",
+      "source": "./vendored/trailofbits/plugins/fp-check",
+      "description": "Systematic false positive verification for security bug analysis with mandatory gate reviews"
+    },
+    {
+      "name": "tob-gh-cli",
+      "source": "./vendored/trailofbits/plugins/gh-cli",
+      "description": "Intercepts GitHub URL fetches (WebFetch and MCP fetch tools) and curl/wget commands, redirecting to the authenticated gh CLI."
+    },
+    {
+      "name": "tob-git-cleanup",
+      "source": "./vendored/trailofbits/plugins/git-cleanup",
+      "description": "Safely analyzes and cleans up local git branches and worktrees by categorizing them as merged, squash-merged, superseded, or active work."
+    },
+    {
+      "name": "tob-github-triage",
+      "source": "./vendored/trailofbits/plugins/github-triage",
+      "description": "Triages a repository's open GitHub issues and pull requests via the gh CLI: optionally merges ready bot and maintainer-approved PRs and spawns review subagents for unreviewed ones, closes already-resolved issues with referenced explanations, cross-links issues with pending fix PRs, and assigns local"
+    },
+    {
+      "name": "tob-goal-prompt",
+      "source": "./vendored/trailofbits/plugins/goal-prompt",
+      "description": "Drafts copy-ready /goal commands for goal mode in Claude Code and Codex: verifiable completion conditions with stop bounds, normalized to a single line under the 4,000-character cap."
+    },
+    {
+      "name": "tob-insecure-defaults",
+      "source": "./vendored/trailofbits/plugins/insecure-defaults",
+      "description": "Detects insecure default configurations including hardcoded credentials, fallback secrets, weak authentication defaults, and dangerous values in production"
+    },
+    {
+      "name": "tob-let-fate-decide",
+      "source": "./vendored/trailofbits/plugins/let-fate-decide",
+      "description": "Draws the 12 Houses of the Zodiac Tarot spread using cryptographic randomness to add 100+ bits of entropy to vague or underspecified planning. Interprets the spread to guide next steps. Use when feeling lucky, invoking heart-of-the-cards energy, or when prompts are ambiguous."
+    },
+    {
+      "name": "tob-modern-cpp",
+      "source": "./vendored/trailofbits/plugins/modern-cpp",
+      "description": "Modern C++ best practices (C++20/23/26). Use when writing C++ code, creating new C++ projects, or modernizing legacy C++ patterns."
+    },
+    {
+      "name": "tob-modern-python",
+      "source": "./vendored/trailofbits/plugins/modern-python",
+      "description": "Modern Python best practices. Use when creating new Python projects, and writing Python scripts, or migrating existing projects from legacy tools."
+    },
+    {
+      "name": "tob-mutation-testing",
+      "source": "./vendored/trailofbits/plugins/mutation-testing",
+      "description": "Configures mewt or muton mutation testing campaigns \u2014 scopes targets, tunes timeouts, and optimizes long-running runs. Use when the user mentions mewt, muton, mutation testing, or wants to configure or optimize a mutation testing campaign."
+    },
+    {
+      "name": "tob-open-sourcing",
+      "source": "./vendored/trailofbits/plugins/open-sourcing",
+      "description": "Prepares a repository for public open-source release: secrets-history hygiene, license selection, documentation and CI readiness checks, and language-specific packaging and release guidance."
+    },
+    {
+      "name": "tob-property-based-testing",
+      "source": "./vendored/trailofbits/plugins/property-based-testing",
+      "description": "Write, review, and triage property-based tests \u2014 Hypothesis, fast-check, proptest, and Echidna or Medusa for Solidity invariants"
+    },
+    {
+      "name": "tob-rust-review",
+      "source": "./vendored/trailofbits/plugins/rust-review",
+      "description": "Comprehensive Rust security code review with specialized bug-finding agents covering the safe/unsafe boundary, memory safety in unsafe blocks, concurrency, panic-induced DoS, recursion-induced stack overflow, FFI, and async runtime hazards"
+    },
+    {
+      "name": "tob-second-opinion",
+      "source": "./vendored/trailofbits/plugins/second-opinion",
+      "description": "Runs code reviews using external LLM CLIs (OpenAI Codex, Google Antigravity) on uncommitted changes, branch diffs, or specific commits. Bundles Codex's built-in MCP server for direct tool access."
+    },
+    {
+      "name": "tob-semgrep-rule-creator",
+      "source": "./vendored/trailofbits/plugins/semgrep-rule-creator",
+      "description": "Create custom Semgrep rules for detecting bug patterns and security vulnerabilities"
+    },
+    {
+      "name": "tob-semgrep-rule-variant-creator",
+      "source": "./vendored/trailofbits/plugins/semgrep-rule-variant-creator",
+      "description": "Creates language variants of existing Semgrep rules with proper applicability analysis and test-driven validation"
+    },
+    {
+      "name": "tob-sharp-edges",
+      "source": "./vendored/trailofbits/plugins/sharp-edges",
+      "description": "Identify error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes"
+    },
+    {
+      "name": "tob-spec-to-code-compliance",
+      "source": "./vendored/trailofbits/plugins/spec-to-code-compliance",
+      "description": "Check code against the documentation that specifies it: one agent per requirement, divergences refuted before they are reported, evidence cited to the line"
+    },
+    {
+      "name": "tob-static-analysis",
+      "source": "./vendored/trailofbits/plugins/static-analysis",
+      "description": "Static analysis toolkit with CodeQL, Semgrep, and SARIF parsing for security vulnerability detection"
+    },
+    {
+      "name": "tob-supply-chain-risk-auditor",
+      "source": "./vendored/trailofbits/plugins/supply-chain-risk-auditor",
+      "description": "Audit a project's npm, PyPI, and Go dependencies for supply-chain risk: version-matched advisories for direct dependencies and the full lockfile tree, abandoned upstreams, npm publisher concentration, and install scripts"
+    },
+    {
+      "name": "tob-testing-handbook-skills",
+      "source": "./vendored/trailofbits/plugins/testing-handbook-skills",
+      "description": "Skills from the Trail of Bits Application Security Testing Handbook (appsec.guide)"
+    },
+    {
+      "name": "tob-trailmark",
+      "source": "./vendored/trailofbits/plugins/trailmark",
+      "description": "Builds multi-language source and binary code graphs for security analysis: call graphs, attack surface mapping, blast radius, taint propagation, complexity hotspots, entry point enumeration, proxy/unresolved-call tracking, type/reference analysis, and structural diffs. Creates bounded, graph-informe"
+    },
+    {
+      "name": "tob-variant-analysis",
+      "source": "./vendored/trailofbits/plugins/variant-analysis",
+      "description": "Find similar vulnerabilities and bugs across codebases using pattern-based analysis"
+    },
+    {
+      "name": "tob-vulnerability-triage-brocards",
+      "source": "./vendored/trailofbits/plugins/vulnerability-triage-brocards",
+      "description": "Principled framework for triaging vulnerability reports using 7 brocards (rules of thumb). Evaluates incoming CVEs, bug bounty submissions, and security findings against structured dismissal/acceptance criteria before escalating to deeper analysis."
+    },
+    {
+      "name": "tob-writing-lean-proofs",
+      "source": "./vendored/trailofbits/plugins/writing-lean-proofs",
+      "description": "Structured Lean 4 proof writing and library design following Mathlib conventions"
+    },
+    {
+      "name": "tob-yara-authoring",
+      "source": "./vendored/trailofbits/plugins/yara-authoring",
+      "description": "YARA-X detection rule authoring with linting and quality analysis"
+    },
+    {
+      "name": "tob-zeroize-audit",
+      "source": "./vendored/trailofbits/plugins/zeroize-audit",
+      "description": "Detects missing or compiler-optimized zeroization of sensitive data with assembly and control-flow analysis"
+    },
+    {
+      "name": "trilwu-secskills-core",
+      "source": "./vendored/trilwu/secskills-core",
+      "description": "The reverse-engineering and code-audit foundation both sides share. 30 dual-use security skills: native and Go/Rust/.NET/iOS/firmware reverse engineering, packers, and Flutter/React Native/Unity/Xamarin runtimes; source-code auditing with PHP-specific depth; webshell and backdoor hunting; multi-agen"
+    },
+    {
+      "name": "trilwu-secskills-defense",
+      "source": "./vendored/trilwu/secskills-defense",
+      "description": "DFIR and detection built on preserve-first, base-rate discipline. 22 defensive security skills for SOC analysts, incident responders, and detection engineers: alert triage, malware and shellcode analysis, memory/disk/network forensics, phishing-email analysis, Windows endpoint DFIR, Linux persistenc"
+    },
+    {
+      "name": "trilwu-secskills-offense",
+      "source": "./vendored/trilwu/secskills-offense",
+      "description": "Attacker tradecraft with the judgment, not just the commands. 40 offensive security skills for red teams and pentesters: web/API/auth exploitation (JWT, OAuth/OIDC, SAML, XXE, SSRF, deserialization, GraphQL, gRPC), Active Directory and Entra ID, AD CS ESC1-16, Kerberos delegation, Linux/Windows priv"
+    }
+  ]
+}
