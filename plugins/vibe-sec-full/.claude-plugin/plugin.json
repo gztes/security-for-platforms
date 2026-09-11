@@ -1,0 +1,12 @@
+{
+  "name": "vibe-sec-full",
+  "version": "1.0.0",
+  "description": "Full curated security catalog (excluding uncategorized).",
+  "author": {
+    "name": "gztes",
+    "url": "https://github.com/gztes/vibe-sec-skills"
+  },
+  "license": "MIXED (MIT, CC-BY-SA-4.0)",
+  "homepage": "https://github.com/gztes/vibe-sec-skills",
+  "repository": "https://github.com/gztes/vibe-sec-skills"
+}

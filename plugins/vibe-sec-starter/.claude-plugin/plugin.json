@@ -1,0 +1,12 @@
+{
+  "name": "vibe-sec-starter",
+  "version": "1.0.0",
+  "description": "Starter 15 security skills for common vibe-coding vulnerabilities.",
+  "author": {
+    "name": "gztes",
+    "url": "https://github.com/gztes/vibe-sec-skills"
+  },
+  "license": "MIXED (MIT, CC-BY-SA-4.0)",
+  "homepage": "https://github.com/gztes/vibe-sec-skills",
+  "repository": "https://github.com/gztes/vibe-sec-skills"
+}

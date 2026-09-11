@@ -1,0 +1,43 @@
+{
+  "name": "vibe-sec-skills",
+  "owner": {
+    "name": "gztes",
+    "url": "https://github.com/gztes"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Curated security skills split into starter, full, and offensive packs."
+  },
+  "plugins": [
+    {
+      "name": "vibe-sec-starter",
+      "version": "1.0.0",
+      "description": "Starter 15: insecure defaults, secrets, auth, dependency risk, and XSS/injection checks.",
+      "author": {
+        "name": "gztes",
+        "url": "https://github.com/gztes"
+      },
+      "source": "./plugins/vibe-sec-starter"
+    },
+    {
+      "name": "vibe-sec-full",
+      "version": "1.0.0",
+      "description": "Full curated catalog for broad security engineering and review workflows.",
+      "author": {
+        "name": "gztes",
+        "url": "https://github.com/gztes"
+      },
+      "source": "./plugins/vibe-sec-full"
+    },
+    {
+      "name": "vibe-sec-offense",
+      "version": "1.0.0",
+      "description": "Offensive skills for authorized testing only.",
+      "author": {
+        "name": "gztes",
+        "url": "https://github.com/gztes"
+      },
+      "source": "./plugins/vibe-sec-offense"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "vibe-sec-offense",
+  "version": "1.0.0",
+  "description": "Offensive security skills for authorized penetration testing only.",
+  "author": {
+    "name": "gztes",
+    "url": "https://github.com/gztes/vibe-sec-skills"
+  },
+  "license": "MIXED (MIT, CC-BY-SA-4.0)",
+  "homepage": "https://github.com/gztes/vibe-sec-skills",
+  "repository": "https://github.com/gztes/vibe-sec-skills"
+}

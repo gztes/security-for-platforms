@@ -1,0 +1,135 @@
+categories:
+  web-api: Web & API
+  auth-sessions: Auth & sessions
+  secrets-config: Secrets & config
+  dependencies-supply-chain: Dependencies / supply chain
+  database: Database
+  cloud-deploy: Cloud & deploy
+  mobile: Mobile
+  ai-llm-features: AI/LLM features
+  code-review-static-analysis: Code review & static analysis
+  incident-response: Incident response
+  compliance-gdpr-soc2: Compliance (GDPR/SOC2)
+  offensive-authorized-testing: Offensive (authorized testing only)
+  uncategorized: Uncategorized
+
+starter_15:
+  - trailofbits/differential-review
+  - trailofbits/supply-chain-risk-auditor
+  - trailofbits/semgrep
+  - trailofbits/codeql
+  - trailofbits/sharp-edges
+  - trailofbits/agentic-actions-auditor
+  - trilwu/testing-web-applications
+  - trilwu/testing-apis
+  - trilwu/attacking-jwt
+  - trilwu/attacking-oauth-oidc
+  - trilwu/exploiting-xxe
+  - trilwu/exploiting-ssrf
+  - trilwu/exploiting-deserialization
+  - trilwu/auditing-code-for-vulnerabilities
+  - masriyan/web-application-security-testing
+
+by_source:
+  masriyan:
+    reconnaissance-osint-automation: offensive-authorized-testing
+    vulnerability-scanning-assessment: code-review-static-analysis
+    exploit-development-payload-engineering: offensive-authorized-testing
+    reverse-engineering-binary-analysis: code-review-static-analysis
+    malware-analysis-sandboxing: incident-response
+    threat-hunting-ioc-analysis: incident-response
+    incident-response-digital-forensics: incident-response
+    network-security-traffic-analysis: web-api
+    web-application-security-testing: web-api
+    cloud-security-container-hardening: cloud-deploy
+    csoc-operations-playbook-automation: incident-response
+    log-analysis-siem-integration: incident-response
+    cryptographic-analysis-assessment: auth-sessions
+    red-team-operations-engagement-planning: offensive-authorized-testing
+    blue-team-defense-hardening: incident-response
+    ai-llm-security: ai-llm-features
+    mobile-application-security: mobile
+    ot-ics-scada-security: offensive-authorized-testing
+    grc-compliance: compliance-gdpr-soc2
+    supply-chain-security: dependencies-supply-chain
+    threat-intelligence-cti: incident-response
+    purple-team-adversary-emulation: offensive-authorized-testing
+
+  trilwu:
+    auditing-code-for-vulnerabilities: code-review-static-analysis
+    auditing-mcp-servers: secrets-config
+    auditing-supply-chain: dependencies-supply-chain
+    reviewing-code-changes: code-review-static-analysis
+    reviewing-cryptography: auth-sessions
+    securing-ai-systems: ai-llm-features
+    managing-vulnerabilities: dependencies-supply-chain
+    triaging-security-alerts: incident-response
+    responding-to-incidents: incident-response
+    hardening-cloud-posture: cloud-deploy
+    defending-kubernetes: cloud-deploy
+    investigating-aws-incidents: cloud-deploy
+    investigating-azure-incidents: cloud-deploy
+    investigating-gcp-incidents: cloud-deploy
+    investigating-m365-entra: auth-sessions
+    testing-web-applications: web-api
+    testing-apis: web-api
+    attacking-jwt: auth-sessions
+    attacking-oauth-oidc: auth-sessions
+    attacking-saml: auth-sessions
+    attacking-graphql: web-api
+    attacking-grpc-protobuf: web-api
+    exploiting-ssrf: web-api
+    exploiting-xxe: web-api
+    exploiting-deserialization: web-api
+    attacking-active-directory: auth-sessions
+    attacking-entra-id: auth-sessions
+    abusing-adcs: auth-sessions
+    abusing-ci-cd-oidc: cloud-deploy
+    exploiting-cloud-platforms: cloud-deploy
+    attacking-eks-gke-aks: cloud-deploy
+    attacking-serverless: cloud-deploy
+    testing-mobile-applications: mobile
+    bypassing-mobile-pinning: mobile
+    bypassing-root-jailbreak-detection: mobile
+    testing-mobile-ipc: mobile
+    testing-ics-ot-protocols: offensive-authorized-testing
+    exploiting-web3-smart-contracts: offensive-authorized-testing
+
+  trailofbits:
+    insecure-defaults: secrets-config
+    supply-chain-risk-auditor: dependencies-supply-chain
+    agentic-actions-auditor: cloud-deploy
+    static-analysis: code-review-static-analysis
+    codeql: code-review-static-analysis
+    semgrep: code-review-static-analysis
+    sarif-parsing: code-review-static-analysis
+    differential-review: code-review-static-analysis
+    variant-analysis: code-review-static-analysis
+    fp-check: code-review-static-analysis
+    sharp-edges: secrets-config
+    semgrep-rule-creator: code-review-static-analysis
+    semgrep-rule-variant-creator: code-review-static-analysis
+    c-review: code-review-static-analysis
+    rust-review: code-review-static-analysis
+    constant-time-analysis: auth-sessions
+    zeroize-audit: auth-sessions
+    yara-rule-authoring: incident-response
+    vulnerability-triage-brocards: incident-response
+    firebase-apk-scanner: mobile
+    burpsuite-project-parser: web-api
+    audit-context-building: code-review-static-analysis
+    dimensional-analysis: code-review-static-analysis
+    dwarf-expert: code-review-static-analysis
+    entry-point-analyzer: code-review-static-analysis
+    spec-to-code-compliance: code-review-static-analysis
+
+defaults:
+  trilwu:
+    secskills-offense/skills/: offensive-authorized-testing
+    secskills-defense/skills/: incident-response
+    secskills-core/skills/: code-review-static-analysis
+  trailofbits:
+    plugins/building-secure-contracts/skills/: offensive-authorized-testing
+    plugins/testing-handbook-skills/skills/: code-review-static-analysis
+    plugins/trailmark/skills/: code-review-static-analysis
+    plugins/static-analysis/skills/: code-review-static-analysis

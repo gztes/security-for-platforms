@@ -1,0 +1,38 @@
+sources:
+  - id: masriyan
+    repo: Masriyan/Claude-Code-CyberSecurity-Skill
+    sha: 42e150160396a2e0e9e9ef7caf07bcefa2731212
+    source_url: https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill
+    license: MIT
+    denylist: []
+  - id: trilwu
+    repo: trilwu/secskills
+    sha: ca53957bcd8e3b83b5d4d190bb3ad008a4f15c84
+    source_url: https://github.com/trilwu/secskills
+    license: MIT
+    denylist:
+      - authoring-security-skills
+      - verifying-skill-accuracy
+  - id: trailofbits
+    repo: trailofbits/skills
+    sha: 321ccfe628eca0d314b0ee4eaffcdd8a05639aaf
+    source_url: https://github.com/trailofbits/skills
+    license: CC-BY-SA-4.0
+    denylist:
+      - chrome-mcp-troubleshooting
+      - code-improver
+      - pr-improver
+      - skill-improver
+      - interpreting-culture-index
+      - devcontainer-setup
+      - gh-cli
+      - github-triage
+      - goal-prompt
+      - let-fate-decide
+      - modern-cpp
+      - modern-python
+      - mutation-testing
+      - open-sourcing
+      - property-based-testing
+      - second-opinion
+      - writing-lean-proofs
